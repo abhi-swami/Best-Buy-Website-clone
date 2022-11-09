@@ -1,0 +1,426 @@
+
+body{
+    margin: 0px;
+    padding: 0px;
+    height: 10000px;
+    font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
+}
+
+/* navbar */
+
+#abNavbar{
+    border: 0px solid black;
+    background:linear-gradient(rgb(38, 100, 214) ,rgb(0,70,190) );
+    /* position: fixed;
+    z-index: 1; */
+    width: 100%;
+    height: 72px;
+    display: grid;
+    grid-template-columns: 10% 10% 57% 10% 10%;
+    gap: 10px;
+}
+#abNavbar>div{
+    border: 0px solid rgb(211, 20, 20);
+    height: 80%;
+    margin-top: 5px;
+    margin-left: 3px;
+}
+#abNavbar>#abDiv1{
+    margin-left: 5px;
+}
+#abNavbar>#abDiv4{
+    margin-left: 90px;
+}
+#abNavbar>#abDiv5{
+    margin-left: 50px;
+}
+#abDiv1{
+    text-align: center;
+}
+
+#abDiv1>span{
+    display: flex;
+    flex-direction: row;
+    width: 63%;
+    margin-left: 40px;
+    font-size: 22px;
+    color: white;
+    font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
+    font-weight:1000;
+    letter-spacing: -2px;
+}
+#abDiv1>span:nth-child(2){
+    margin-top: -10px;
+    margin-left: 45px;
+}
+#abDiv1>img{
+    width: 35px;
+    position: absolute;
+    top: 35px;
+    left: 100px;
+    background: rgb(133, 11, 11);
+    border-top-left-radius: 10px ;
+    border-bottom-left-radius: 10px ;
+}
+#tradeMark{
+    position: absolute;
+    top: 25px;
+    left: 110px;
+    font-size: 10px;
+    color: white;
+}
+#abDiv2{
+    padding-left: 17px;
+    margin: auto;
+
+}
+#abDiv2>#abMenuLogo{
+    color: white;
+    display: flex;
+    padding-top: 18px;
+    flex-direction: row;
+    gap: 5px;
+}
+#abMenuWord{
+    font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 200;
+    margin-top: -4px;
+}
+
+#abDiv3>div{
+    border: 0px solid rgb(0, 0, 0);
+    width: 5%;
+    height: 80%;
+    margin: -56px 0 0 408px;
+    border-left: none;
+    border-radius: 0  5px 5px 0;
+    background: white;
+}
+#abSearchIP{
+    width: 50%;
+    height: 80%;
+    margin: 5px 20px 10px 5px;
+    border: 0px solid grey;
+    border-right:none;
+    border-radius: 5px 0 0 5px;
+}
+#abDiv3>div>i{
+    margin-top: 15px;
+    margin-left: 5px;
+}
+#abDiv4{
+    padding-left: 17px;
+    margin: auto;
+}
+#abDiv4>#abStoreLogo{
+    color: white;
+    display: flex;
+    padding-top: 18px;
+    flex-direction: row;
+    gap: 5px;
+}
+#abWordAiea{
+    font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 200;
+    margin-top: -4px;
+}
+#abDiv5{
+    padding-left: 7px;
+    margin: auto;
+    margin-left: 10px;
+}
+#abDiv5>#abCartLogo{
+    color: white;
+    display: flex;
+    padding-top: 18px;
+    flex-direction: row;
+    gap: 5px;
+}
+#abWordCart{
+    font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 200;
+    margin-top: -4px;
+}
+.hoverContent:hover{
+    cursor: pointer;
+}
+
+
+
+/* suv Nav bar */
+#abSubNav{
+    height: 44px;
+    width: 100%;
+    border: 0px solid black;
+    background:rgb(0,70,190);
+    display: grid;
+    grid-template-columns: 9% 7% 10% 13% 7% 7% 7% 11% 9% 8% ;
+    gap: 1px;
+}
+#abSubNav>div{
+    border: 0px solid black;
+    margin-left: 10px;
+    width: 70%;
+    height: 80%;
+    margin-top: 2px;
+    font-size: 12px;
+    color:white;
+    line-height: 17px;
+    font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#abSubNav>#abSubNavDiv2{
+    margin-left: -10px;
+}
+#abSubNav>#abSubNavDiv3{
+    margin-left: -30px;
+}
+#abSubNav>#abSubNavDiv4{
+    margin-left: -60px;
+}
+#abSubNav>#abSubNavDiv5{
+    margin-left: -100px;
+}
+#abSubNav>#abSubNavDiv6{
+    margin-left: -120px;
+}
+#abSubNav>#abSubNavDiv7{
+    margin-left: 280px;
+    font-size: 13px;
+    font-weight: 600;
+}
+#abSubNav>#abSubNavDiv8{
+    margin-left: 260px;
+    font-size: 13px;
+    font-weight: 600;
+}
+#abSubNav>#abSubNavDiv9{
+    margin-left: 220px;
+    font-size: 13px;
+    font-weight: 600;
+}
+#abSubNav>#abSubNavDiv10{
+    margin-left: 190px;
+    font-size: 13px;
+    font-weight: 600;
+}
+#abShopDaealByCatWord{
+    position: absolute;
+    top: 320px;
+    font-size: 15px ;
+    line-height: 20px;
+    color: white;
+    margin-left: 12%;
+    margin-top: 10px;
+
+}
+#abCatMainDiv{
+    border: 1px solid rgb(255, 255, 255);
+    border: none;
+    border-top: 1px solid rgb(255, 255, 255);
+    height: 1034px;
+    width: 100%;
+    background:radial-gradient(rgb(38, 100, 214) ,rgb(8, 55, 137) );
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+#abCatMainDiv>div{
+    border: 0px solid white;
+    height: 212px;
+    width: 75%;
+    margin-left:12%;
+}
+#abCatSubDiv1{
+    display: flex;
+    /* margin: auto; */
+}
+#abCatSubDiv1>div{
+border: 0px solid black;
+margin-top: 10px;
+}
+#abCatSubDiv1>#abBlackFridayDiv{
+width: 68%;
+height: 90%;
+}
+#abCatSubDiv1>#abShopNowDiv{
+width: 30%;
+height: 90%;
+}
+#abBFDWord{
+    border: 0px solid ;
+    color: white;
+    line-height: 60px;
+    font-size: 72px;
+    font-weight: 700;
+    font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+}
+#abRNWord{
+    border: 0px solid ;
+    color: yellow;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
+    margin-top: -70px;
+}
+#abSSWord{
+    border: 0px solid ;
+    color: white;
+    font-size: 20px;
+    line-height: 26px;
+    font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
+    margin-top: -35px;
+}
+
+#abLQWord{
+    border: 0px solid ;
+    color: white;
+    font-size: 11px;
+    line-height: 26px;
+    margin-top: 25px;
+    font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
+}
+#abSeeWord{
+    border: 0px solid ;
+    color: white;
+    font-size: 11px;
+    line-height: 26px;
+    margin-top: -20px;
+    font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
+}
+#abBFDyellow{
+    border: 0px solid ;
+    color: #FFE000;
+    font-size: 11px;
+    line-height: 26px;
+    margin-top: -7px;
+    font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
+}
+#abBFDSNButton{
+    margin-top: -5px;
+}
+#abBFDSNButton>button{
+    border: none;
+    background-color: #FFE000;
+    padding: 5px;
+    border-radius: 3px;
+    margin-left: 10px;
+    margin-top: -500px;
+}
+#abCatMainDiv>#abCatSubDiv2{
+    height: auto;
+}
+#abCatSubDiv2{
+    display: grid;
+    grid-template-columns: repeat(6,16%);
+    gap: 5px;
+    row-gap: 45px;
+}
+#abCatSubDiv2>div{
+    border: 0px solid red;
+    height: auto;
+    margin-left: 15px;
+    margin-top: 30px;
+}
+.abproductImageDiv{
+    background-color: white;
+    border-radius: 50%;
+    height: 90%;
+    border: 2px solid #598bf7
+}
+.abProductRoundImage{
+    width: 70%;
+    margin-left: 25px;
+    margin-top: 30px;
+    border-radius: 12%;
+}
+.productHoverContent>p{
+    color: #FFE000;
+    font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: center;
+    margin-top: -5px;
+}
+.abPCproductName{
+    padding-top: 15px;
+}
+#abCatSubDiv2>div>div:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #FFE000;
+}
+.abPCproductName:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #FFE000;
+}
+#abNewArrivalDiv{
+    border: 0px solid black;
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+}
+#abNewArrivalDiv>div{
+    border:0px solid black;
+    width:100%;
+    height: 50px;
+}
+#abNewArrivalWord{
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 22px;
+    text-decoration: underline;
+    margin-left: 20px;
+}
+#abNewArrivalHr{
+    width: 98%;
+    margin-top: -10px;
+    border: 0.1px  solid lightgrey;
+    color: grey;
+}
+#abNewArrivalSubDiv2{
+    border:1px solid black;
+    display: grid;
+    grid-template-columns: repeat(5,18%);
+    /* margin: auto; */
+    column-gap: 30px;
+}
+#abNewArrivalSubDiv2>div{
+    border:1px solid grey;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    margin-top: 40px;
+    border-radius: 5px;
+    border-color: grey;
+}
+
+.abNewArrivalCardImage:nth-child(1){
+    width:10em;
+    height: 18vh;
+    border: 0px solid red;
+}
+
+.abNewArrivalCardProduct{
+    text-align: center;
+    color: rgb(8, 55, 137);
+}
+.abNewArrivalCardProduct:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: rgb(137,87,200);
+}
