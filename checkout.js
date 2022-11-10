@@ -6,11 +6,24 @@ let returnToCart = () => {
 
 document.getElementById('pyoBtn').addEventListener('click', function(){
 
-    let firstName = document.getElementById('firstName').value;
-
-    let lastName = document.getElementById('lastName').value;
-
-
     
+    let popBg = document.getElementById('popBg')
+
+    popBg.style.display = 'block'
 
 })
+
+let continueShopping = () => {
+    location.href = 'index.html'
+}
+
+
+let data = JSON.parse(localStorage.getItem('price'));
+
+
+let showPrice = document.getElementById('showPrice')
+let totalPrice = document.getElementById('totalPrice')
+
+showPrice.innerText = `$${data}`
+totalPrice.innerText = `$${data}`
+

@@ -210,7 +210,7 @@ margin-right:5px;
     position:absolute;
     background-color: rgba(0, 0, 0, 0.611);
     top:0;
-
+    display:none;
 }
 #popBox{
     width:30%;
@@ -221,4 +221,26 @@ margin-right:5px;
     left:500px;
     background-color: #a5a5a5;
     padding:20px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#popBox> img {
+    width:70%;
+    margin-top:-60px;
+    margin-left:-50px;
+}
+.placed{
+    font-size: 24px;
+    color:rgb(12, 181, 12);
+    font-weight: 600;
+    
+}
+#popBox > button{
+    padding:8px;
+    margin-left:200px;
+    background-color:white ;
+    color:#0046BE;
+    font-weight: 600;
+    border:1px solid ;
+    cursor: pointer;
 }
