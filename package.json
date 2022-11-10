@@ -1,0 +1,24 @@
+{
+  "name": "shaky-coast-2728",
+  "version": "1.0.0",
+  "description": "Construct Week Project",
+  "main": "cart.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhi-swami/shaky-coast-2728.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhi-swami/shaky-coast-2728/issues"
+  },
+  "homepage": "https://github.com/abhi-swami/shaky-coast-2728#readme",
+  "dependencies": {
+    "json": "^11.0.0",
+    "server": "^1.0.37"
+  }
+}
