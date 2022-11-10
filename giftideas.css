@@ -1,0 +1,75 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#inncontainer{
+    width: 95%;
+    margin: auto;
+}
+#inncard1{
+    padding-top: 10px;
+    display: flex;
+    justify-content:space-between;
+}
+.inncard{
+    width:30%;
+}
+.innright{
+    padding-right: 30px;
+    border-right: 2px solid #9da0a3;
+}
+.inncard>img{
+    width: 90%;
+    display: flex;
+    margin: auto;
+}
+#innh2{
+    font-size: 20px;
+    color:#0457c8; 
+}
+#innp{
+    font-size: 13px;
+}
+div>#innh2{
+    color: black;
+    font-size: 20px;
+}
+#inncard2{
+    padding-top: 20px;
+    display:flex;
+    justify-content: space-around;
+    
+}
+.graycard{
+    background-color: #f0f2f4;
+    width: 48%;
+    display:flex;
+    justify-content: center;
+    border: 1px solid gray;
+    
+}
+
+.graycard>div>img{
+    padding: 10px;
+    height: 80%;
+    width: 100px;
+    margin: auto;
+}
+#inncard3{
+    padding-top: 20px;
+    display: flex;
+    justify-content:space-between;
+}
+#inncard3>div{
+    display: flex;
+    width: 30%;
+    height: 100px;
+    justify-content: center;
+    padding-right: 30px;
+}
+#inncard3>div>div>img{
+    height: 80%;
+    padding: 10px;
+}
+.sec{
+    padding-left: 30px;
+}

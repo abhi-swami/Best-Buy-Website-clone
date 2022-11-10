@@ -1,0 +1,128 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#footercon{
+   margin: auto;
+   background-color: #f0f2f4;
+}
+#indiv1{
+    width: 90%;
+    display: flex;
+    margin:auto;
+    padding: 50px 0px 0px 0px;
+    justify-content: space-around;
+    color:#21a2de;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder ;
+}
+.incard>i{
+    color: gray;
+    font-size: 50px;
+    text-align: center;
+    
+}
+
+.incard>#inp:hover{
+    cursor:pointer;
+    color: #001e73; ;
+    text-decoration: underline;
+}
+#inhr{
+    width: 95%;
+}
+
+#indiv2{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+} 
+#inp{
+    color: #5c91d8; ;
+}
+#insign{
+    background-color: white;
+    width: 30%;
+    margin: 15px 0px;
+}
+#insign{
+    background-color: white;
+    width: 30%;
+    margin: 15px 0px;
+}
+#insign>p{
+    font-size: 13px;
+}
+#ininput{
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 5px;
+}
+#inbutton{
+    background-color: #0046be;
+    margin: auto;
+    font-size: 13px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+#inbutton:hover{
+    cursor:pointer;
+    background-color: #001e73; ;
+}
+#insign>div{
+    width: 95%;
+    margin: auto;
+}
+#insign>div>p{
+   font-size: 13px;
+}
+#bestbuy>p{
+    font-weight: bold;
+}
+#inicons{
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+#inicons>i{
+    color: #001e73;
+    font-size:30px;
+}
+.bcard2{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content:space-between;
+}
+.incard>i{
+    width: 100%;
+    margin: 1px solid;
+}
+#bcard{
+    width:65%;
+    font-size: 13px;
+}
+.bcard2{
+    height: auto;
+}
+.incards{
+    margin: auto;
+    width: 30%;
+}
+.incards>p:hover
+{
+    text-decoration: underline;
+    cursor:pointer;
+}
+#bestbuy{
+    display: flex;
+}
+#bestbuy>div>i{
+    padding: 30px 20px 0px 0px;
+    font-size: 50px;
+    margin: auto;
+}
