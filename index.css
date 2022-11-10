@@ -2,7 +2,7 @@
 body{
     margin: 0px;
     padding: 0px;
-    height: 10000px;
+    height: 2000px;
     font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
 }
 
@@ -150,7 +150,7 @@ body{
 
 
 
-/* suv Nav bar */
+/* subNav bar */
 #abSubNav{
     height: 44px;
     width: 100%;
@@ -226,7 +226,7 @@ body{
     border-top: 1px solid rgb(255, 255, 255);
     height: 1034px;
     width: 100%;
-    background:radial-gradient(rgb(38, 100, 214) ,rgb(8, 55, 137) );
+    background:radial-gradient(rgb(26, 96, 227) ,rgb(2, 25, 65) );
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
@@ -334,13 +334,15 @@ height: 90%;
     background-color: white;
     border-radius: 50%;
     height: 90%;
-    border: 2px solid #598bf7
+    border: 2px solid #598bf7;
+    object-fit:contain;
 }
 .abProductRoundImage{
     width: 70%;
     margin-left: 25px;
     margin-top: 30px;
     border-radius: 12%;
+    object-fit:contain;
 }
 .productHoverContent>p{
     color: #FFE000;
@@ -364,10 +366,13 @@ height: 90%;
     text-decoration: underline;
     color: #FFE000;
 }
+
+/* new Arrival  section */
+
 #abNewArrivalDiv{
     border: 0px solid black;
     width: 100%;
-    height: 1000px;
+    height: 400px;
     display: flex;
     flex-direction: column;
 }
@@ -393,7 +398,6 @@ height: 90%;
     border:1px solid black;
     display: grid;
     grid-template-columns: repeat(5,18%);
-    /* margin: auto; */
     column-gap: 30px;
 }
 #abNewArrivalSubDiv2>div{
@@ -413,6 +417,7 @@ height: 90%;
     width:10em;
     height: 18vh;
     border: 0px solid red;
+    object-fit:contain;
 }
 
 .abNewArrivalCardProduct{
@@ -423,4 +428,303 @@ height: 90%;
     cursor: pointer;
     text-decoration: underline;
     color: rgb(137,87,200);
+}
+
+
+/* <!-- outletDeals & singnup --> */
+#aboutletNSingUpMainDiv{
+    border: 0px solid black;
+    width: 100%;
+    height: 290px;
+    display: flex;
+}
+#aboutletNSingUpMainDiv>div{
+    border: 1px solid grey;
+    flex-direction: column;
+    border-radius: 5px;
+    margin: auto;
+    width: 47%;
+    height: 98%;
+}
+#abouletDiv{
+    display: flex;
+    grid-template-columns: repeat(2,30%);
+}
+#abouletDiv>div{
+    border: 0px solid blue;
+    height: 165px;
+    margin-left: 30px;
+    margin-top: 80px;
+}
+#abouletDivButton{
+    border:none;
+    position: relative;
+    width: 117px;
+    height: 31px;
+    margin: 25px;
+    background-color: blue;
+}
+#abouletDivButtonOutlet{
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 22px;
+    color: yellow;
+}
+#abouletDivButtonDeals{
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 22px;
+    color: white;
+    margin-left: 3px;
+}
+#abouletDivRight{
+    position: absolute;
+    top: 1599px;
+    left: 300px;
+    width: 25%;
+    line-height: 5px;
+}
+#abouletDivRight>button{
+    border: 1px solid blue;
+    color: blue;
+    background-color: white;
+    border-radius: 2px;
+    padding: 5px;
+    font-weight: 600;
+    margin-top: 12px;
+}
+#abouletDivRight>button:hover{
+    cursor: pointer;
+    background-color: rgb(0,70,190);;
+    color: white;
+}
+
+#abouletDivLeft{
+    position: absolute;
+    top: 1575px;
+    left: 20px;
+    width: 15%;
+    font-size: 40px;
+    text-align: justify;
+    line-height: 2px;
+    font-weight: 600;
+    padding-left: 30px;
+    margin-top: -10px;
+}
+#abouletDivLeft>p:nth-child(1){
+    color: red;
+}
+#aboutletComman{
+    color: black;
+}
+#aboutletFullStop{
+    color:red;
+}
+
+#abContinueShoppingText{
+    border: 0px solid red;
+    position: relative;
+    width: 160px;
+    height: 31px;
+    margin: 25px;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 21px;
+}
+#abContinueShoppingHr{
+    width: 42%;
+    background-color: grey;
+    border:  0.3pt solid grey;
+    position: absolute;
+    top: 1635px;
+    left: 760px;
+}
+
+#abContinueShoppingDiv{
+    display: grid;
+    grid-template-columns: repeat(2,40%);
+}
+#abContinueShoppingDiv>div{
+    border: 0px solid black;
+    margin-left: 5px;
+}
+#abContinueShoppingleftDiv{
+    position: absolute;
+    top: 1690px;
+    left: 760px;
+    width: 13%;
+    height: 170px;
+    display: flex;
+}
+#abContinueShoppingRightDiv{
+    position: absolute;
+    top: 1690px;
+    left: 980px;
+    width: 24%;
+    height: 170px;
+    /* display: flex; */
+}
+#abContinueShoppingleftDiv>img{
+    width: 80%;
+    margin: auto;
+}
+#abContinueShoppingRightDiv>p{
+    text-align: left;
+    line-height: 6px;
+    color: rgb(4,87,200);
+}
+#abContinueShoppingRightDiv>button{
+    border: 1px solid rgb(0,70,190);
+    background: white;
+    color:  rgb(0,70,190);
+    margin-top: 5px;
+    padding: 5px;
+    border-radius:3px;
+    font-weight: 600;
+}
+#abContinueShoppingRightDiv>button:hover{
+    background-color: rgb(0,70,190);
+    color:white;
+    cursor: pointer;
+}
+/* tech membership section */
+
+/* #abTotalTechMemberShipDiv{
+    border: 1px solid black;
+    width: 100%;
+    height: 140px;
+} */
+
+
+
+
+
+
+/* footer */
+
+
+#footercon{
+    margin: auto;
+    background-color: #f0f2f4;
+}
+#indiv1{
+    width: 90%;
+    display: flex;
+    margin:auto;
+    padding: 50px 0px 0px 0px;
+    justify-content: space-around;
+    color:#21a2de;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder ;
+}
+.incard>i{
+    color: gray;
+    font-size: 50px;
+    text-align: center;
+    
+}
+
+.incard>#inp:hover{
+    cursor:pointer;
+    color: #001e73; ;
+    text-decoration: underline;
+}
+#inhr{
+    width: 95%;
+}
+
+#indiv2{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+} 
+#inp{
+    color: #5c91d8; ;
+}
+#insign{
+    background-color: white;
+    width: 30%;
+    margin: 15px 0px;
+}
+#insign{
+    background-color: white;
+    width: 30%;
+    margin: 15px 0px;
+}
+#insign>p{
+    font-size: 13px;
+}
+#ininput{
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 5px;
+}
+#inbutton{
+    background-color: #0046be;
+    margin: auto;
+    font-size: 13px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+#inbutton:hover{
+    cursor:pointer;
+    background-color: #001e73; ;
+}
+#insign>div{
+    width: 95%;
+    margin: auto;
+}
+#insign>div>p{
+font-size: 13px;
+}
+#bestbuy>p{
+    font-weight: bold;
+}
+#inicons{
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+#inicons>i{
+    color: #001e73;
+    font-size:30px;
+}
+.bcard2{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content:space-between;
+}
+.incard>i{
+    width: 100%;
+    margin: 1px solid;
+}
+#bcard{
+    width:65%;
+    font-size: 13px;
+}
+.bcard2{
+    height: auto;
+}
+.incards{
+    margin: auto;
+    width: 30%;
+}
+.incards>p:hover
+{
+    text-decoration: underline;
+    cursor:pointer;
+}
+#bestbuy{
+    display: flex;
+}
+#bestbuy>div>i{
+    padding: 30px 20px 0px 0px;
+    font-size: 50px;
+    margin: auto;
 }
