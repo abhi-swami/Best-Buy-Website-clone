@@ -79,7 +79,8 @@ document.getElementById('specialOffer').addEventListener('click', function(){
 
 
 let totalSum;
-
+let ns = 0;
+let lsVal = 0;
 document.getElementById('availOffer').addEventListener('click', function(){
 
     let disc4 = document.getElementById('disc4').value;
@@ -87,7 +88,10 @@ document.getElementById('availOffer').addEventListener('click', function(){
     let hiddenHurrray = document.getElementById('hiddenHurrray')
     hiddenHurrray.style.display = 'block'
 
+ns = Math.floor(ns - ((4*ns)/100))
     
+
+    calculation(ns, 0)
     
     
 })
@@ -97,13 +101,21 @@ document.getElementById('availOffer').addEventListener('click', function(){
 let itemTotal = document.getElementById('itemTotal');
 let showTotal = document.getElementById('showTotal');
 
+let calculation = (val, ns) => {
+
+
+    itemTotal.innerText = `$${val+ns}`
+    showTotal.innerText = `$${val+ns}`
+
+    lsVal = val+ns
+}
  
 
 
+let newVal = 0;
 
 
 let arr = []
-let ns = 0;
 // appending Functions  ---------------------
 let cards = ({product_image, name, price, id}) => {
 
@@ -127,7 +139,6 @@ let cards = ({product_image, name, price, id}) => {
 
     let quantityBtn = document.createElement('select')
     quantityBtn.className = 'quantityBtn'
-    
     for(let i=0; i<5; i++){
         
         let options = document.createElement('option')
@@ -138,7 +149,7 @@ let cards = ({product_image, name, price, id}) => {
             let quantity = +quantityBtn.options[quantityBtn.selectedIndex].value
 
             
-            let quantityPrice = quantity*price
+            let quantityPrice = (quantity-1)*price
 
             let count = 0;
             for(let i=0; i<30; i++){
@@ -150,12 +161,20 @@ let cards = ({product_image, name, price, id}) => {
             }
         }
         
-
+        let val=0
+        
             if(count == 0){
+                newVal+=quantityPrice
+                console.log(newVal)
                 arr.push(id)
                 count = 0
+                calculation(newVal, ns)
             }else{
 
+
+                // val = quantityPrice
+                
+                console.log(newVal)
                 count = 0 
             }
         }
@@ -226,14 +245,14 @@ let removeProduct = (id) => {
 
 let men_data = [
    
-    {
-      "jss2573 href": "https://www.maxfashion.in/in/en/SHOP-Max-Green-MAX-Men-Striped-Band-Collar-Slim-Fit-Short-Kurta/p/1000011359476-Green-OLIVEGREEN",
-      "product_image": "https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011359476-Green-OLIVEGREEN-1000011359476-15092022_01-2100.jpg",
-      "rup": "₹",
-      "price": 999,
-      "name": "MAX Men Striped Band Collar Slim Fit Short Kurta",
+    // {
+    //   "jss2573 href": "https://www.maxfashion.in/in/en/SHOP-Max-Green-MAX-Men-Striped-Band-Collar-Slim-Fit-Short-Kurta/p/1000011359476-Green-OLIVEGREEN",
+    //   "product_image": "https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011359476-Green-OLIVEGREEN-1000011359476-15092022_01-2100.jpg",
+    //   "rup": "₹",
+    //   "price": 999,
+    //   "name": "MAX Men Striped Band Collar Slim Fit Short Kurta",
     
-    },
+    // },
     {
       "jss2573 href": "https://www.maxfashion.in/in/en/SHOP-Max-Olive-Green-MAX-Men-Striped-Band-Collar-Slim-Fit-Short-Kurta/p/1000011722997-Green-OLIVEGREEN",
       "product_image": "https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011722997-Green-OLIVEGREEN-1000011722997-02092022_01-2100.jpg",
@@ -303,3 +322,16 @@ let renderFrequent = (data) => {
 }
 renderFrequent(men_data)
 
+
+document.getElementById('checkout').addEventListener('click', function(){
+
+    location.href= 'checkout.html'
+
+    localStorage.setItem('price', JSON.stringify(lsVal))
+
+    let newDate = Date()
+    // console.log(newDate)
+    
+    localStorage.setItem('date', JSON.stringify(newDate))
+
+})
