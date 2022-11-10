@@ -79,13 +79,7 @@ document.getElementById('specialOffer').addEventListener('click', function(){
 
 
 let totalSum;
-let addProductPrice = (val) => {
 
-    productPriceSum+= val
-
-    totalSum = productPriceSum + sum;
-
-}
 document.getElementById('availOffer').addEventListener('click', function(){
 
     let disc4 = document.getElementById('disc4').value;
@@ -93,26 +87,18 @@ document.getElementById('availOffer').addEventListener('click', function(){
     let hiddenHurrray = document.getElementById('hiddenHurrray')
     hiddenHurrray.style.display = 'block'
 
-    let newL = productPriceSum-29
+    
     
     
 })
 
 
 // All Calculation functions ------------------
-let sum = 0
 let itemTotal = document.getElementById('itemTotal');
 let showTotal = document.getElementById('showTotal');
 
  
-console.log(productPriceSum+sum)
 
-let addEverything = (qpr, newSum) => {
-
-    
-    itemTotal.innerText = `$${qpr+newSum}`
-    showTotal.innerText = `$${qpr+newSum}`
-}
 
 
 
@@ -166,13 +152,10 @@ let cards = ({product_image, name, price, id}) => {
         
 
             if(count == 0){
-                sum+= quantityPrice
-                addEverything(sum, totalSum-price)
                 arr.push(id)
                 count = 0
             }else{
 
-                addEverything(quantityPrice, totalSum-price)
                 count = 0 
             }
         }
@@ -201,7 +184,6 @@ let cards = ({product_image, name, price, id}) => {
     let prices = document.createElement('h4')
     prices.innerText = ` $ ${price}`
     prices.className = 'prices'
-    addProductPrice(price)
 
     ns+=price
 
