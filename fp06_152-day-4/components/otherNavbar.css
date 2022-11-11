@@ -1,0 +1,47 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#in4header{
+    height: 70px;
+    border: 1px solid;
+    background-color: #0046be;
+    justify-content: space-around;
+    color: white;
+    display: flex;
+    font-size: 13px;
+}
+
+#in4card1>img{
+    height: 70px;
+    cursor: pointer;
+}
+#in4card2{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+#in4footer>div{
+    width: 1000px;
+    margin: 10px auto auto auto;
+    font-size: 11px;
+}
+.in4blue{
+    color: #0046be;
+    cursor: pointer; 
+}
+#in4footer{
+    background: rgb(211, 211, 211);
+    border: 0px solid black;
+    width: 100%;
+    height: 150px;
+    margin-top: 50px;
+    padding-top: 30px;
+}
+footer{
+    background: rgb(211, 211, 211);
+
+}
+
+

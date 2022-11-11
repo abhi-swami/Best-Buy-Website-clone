@@ -1,0 +1,76 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    /* height: 2000px; */
+    font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
+}
+
+
+/* login HTMl */
+
+#SingInDiv>h2{
+    text-align: center;
+    padding-top: 20px;
+}
+#SingInDiv{
+    width: 33%;
+    height: 500px;
+    border: 0px solid darkblue;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#SingInDiv>form{
+    margin: 15px;
+    color:rgb(17, 16, 16);
+}
+#SingInDiv>form>input{
+    margin:10px 3px 20px 3px;
+    width: 93%;
+    padding: 10px;
+    border-radius: 5px;
+    border:0.1px solid darkgrey;
+    color:rgb(12, 10, 10);
+}
+
+.Login{
+    color:rgb(7, 6, 6);
+    border:0.1px solid black;
+    width: 90%;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 17px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 7px;
+    cursor:pointer;
+    font-size: 15px;
+    font-weight: 600;
+}
+#googleImg{
+    width:40px;
+    margin: auto;
+    background: white;
+}
+a{
+    text-decoration: none;
+}
+.Login:hover{
+    color: darkgreen;
+}
+label{
+    margin-left: 4px;
+    font-weight:600;
+}
+span{
+    color: rgb(91,138,240);
+    cursor: pointer;
+}
+.abPTagLogin{
+    font-size: 18px;
+    text-align: center;
+}
+#al{
+    font-size: 18px;
+}

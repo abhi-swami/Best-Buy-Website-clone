@@ -1,0 +1,209 @@
+#abNavbar{
+    border: 0px solid black;
+    background:linear-gradient(rgb(38, 100, 214) ,rgb(0,70,190) );
+    /* position: fixed;
+    z-index: 1; */
+    width: 100%;
+    height: 72px;
+    display: grid;
+    grid-template-columns: 10% 10% 57% 10% 10%;
+    gap: 10px;
+}
+#abNavbar>div{
+    border: 0px solid rgb(211, 20, 20);
+    height: 80%;
+    margin-top: 5px;
+    margin-left: 3px;
+}
+#abNavbar>#abDiv1{
+    margin-left: 5px;
+}
+#abNavbar>#abDiv4{
+    margin-left: 90px;
+}
+#abNavbar>#abDiv5{
+    margin-left: 50px;
+}
+#abDiv1{
+    text-align: center;
+}
+
+#abDiv1>span{
+    display: flex;
+    flex-direction: row;
+    width: 63%;
+    margin-left: 40px;
+    font-size: 22px;
+    color: white;
+    font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
+    font-weight:1000;
+    letter-spacing: -2px;
+}
+#abDiv1>span:nth-child(2){
+    margin-top: -10px;
+    margin-left: 45px;
+}
+#abDiv1>img{
+    width: 35px;
+    position: absolute;
+    top: 35px;
+    left: 100px;
+    background: rgb(133, 11, 11);
+    border-top-left-radius: 10px ;
+    border-bottom-left-radius: 10px ;
+}
+#tradeMark{
+    position: absolute;
+    top: 25px;
+    left: 110px;
+    font-size: 10px;
+    color: white;
+}
+#abDiv2{
+    padding-left: 17px;
+    margin: auto;
+
+}
+#abDiv2>#abMenuLogo{
+    color: white;
+    display: flex;
+    padding-top: 18px;
+    flex-direction: row;
+    gap: 5px;
+}
+
+
+#abMenuWord{
+    font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 200;
+    margin-top: -4px;
+}
+
+#abDiv3>div{
+    border: 0px solid rgb(0, 0, 0);
+    width: 5%;
+    height: 80%;
+    margin: -56px 0 0 408px;
+    border-left: none;
+    border-radius: 0  5px 5px 0;
+    background: white;
+}
+#abSearchIP{
+    width: 50%;
+    height: 80%;
+    margin: 5px 20px 10px 5px;
+    border: 0px solid grey;
+    border-right:none;
+    border-radius: 5px 0 0 5px;
+}
+#abDiv3>div>i{
+    margin-top: 15px;
+    margin-left: 5px;
+}
+#abDiv4{
+    padding-left: 17px;
+    margin: auto;
+}
+#abDiv4>#abStoreLogo{
+    color: white;
+    display: flex;
+    padding-top: 18px;
+    flex-direction: row;
+    gap: 5px;
+}
+#abWordAiea{
+    font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 200;
+    margin-top: -4px;
+}
+#abDiv5{
+    padding-left: 7px;
+    margin: auto;
+    margin-left: 10px;
+}
+#abDiv5>#abCartLogo{
+    color: white;
+    display: flex;
+    padding-top: 18px;
+    flex-direction: row;
+    gap: 5px;
+}
+#abWordCart{
+    font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 200;
+    margin-top: -4px;
+}
+.hoverContent:hover{
+    cursor: pointer;
+}
+
+
+/* menubar css */
+.abmenuclass{
+    width: 20%;
+    display: none;
+    border: 0px solid purple;
+    /* height: 1300px; */
+    height: 650px;
+    opacity: 1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: white;
+    z-index: 1;
+    box-shadow: 0 0 10px rgb(165, 158, 158);
+    position: absolute;
+    top: 55px;
+    left: 100px;
+}
+
+.abmenuclass::-webkit-scrollbar{
+    width: 8px;
+    background: rgb(210, 208, 208);
+}
+.abmenuclass::-webkit-scrollbar-thumb{
+    background: #abadb0;
+}
+.abmenuclass h4{
+    color: #0046BE;
+    font-family: "Human BBY Digital", "Human Fallback",Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    line-height: 1px;
+    font-size: 15px;
+    margin-left: 10px;
+}
+.abmenuclass p{
+    color: #0046BE;
+    font-family: "Human BBY Digital", "Human Fallback",Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 5px;
+    margin-left: 10px;
+
+}
+.abmenuclass h1{
+    margin-left: 10px;
+    font-size: 18px;
+    line-height: 10px;
+    font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
+}
+
+li[type="none"]{
+    display: flex;
+    justify-content: space-between;
+}
+li[type="none"] i{
+    margin-top: 10px;
+    margin-right: 10px;
+    color: grey;
+}
+#abclose{
+    margin-right: 380px;
+}
+#abclose i{
+    margin-top: 20px;
+    font-size: 30px;
+    color: black;
+}
+
