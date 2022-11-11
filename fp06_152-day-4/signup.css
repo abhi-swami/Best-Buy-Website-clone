@@ -1,0 +1,67 @@
+
+body{
+    margin: 0px;
+    padding: 0px;
+    /* height: 2000px; */
+    font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
+}
+
+#singUpDiv>h2{
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 50px;
+}
+#singUpDiv{
+    width: 33%;
+    height: 770px;
+    border: 0px solid darkblue;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#singUpDiv>form{
+    margin: 15px;
+    color:rgb(17, 16, 16);
+}
+#singUpDiv>form>input{
+    margin:10px 3px 20px 3px;
+    width: 93%;
+    padding: 10px;
+    border-radius: 5px;
+    border:0.1px solid darkgrey;
+    color:rgb(12, 10, 10);
+}
+input[type="submit"]{
+    color: rgb(165,168,174);
+    border: none;
+    width: 98%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: rgb(227, 227, 227);
+    border-radius: 7px;
+    cursor:pointer;
+}
+#singUpDiv>form>label{
+    margin-left: 4px;
+    font-weight:600;
+}
+span{
+    color: rgb(91,138,240);
+    text-decoration: underline;
+    cursor: pointer;
+}
+.abSignUpPTag{
+    font-size: 14px;
+    text-align: center;
+}
+#al{
+    font-size: 18px;
+}
+#rigesterUser{
+    width: 93%;
+    margin: auto;
+    padding: 10px;
+    margin-left: 13px;
+    margin-top: 5px;
+}

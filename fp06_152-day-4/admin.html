@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./admin.css">
+</head>
+<body>
+    <div id="adminMainDiv">
+        <div id="adminSubDiv-1">
+            <div id="selectCategoryDiv">
+                <h3>Category Section</h3>
+                <button id="allCategory">All Category</button>
+                <button id="laptops">Laptops</button>
+                <button id="tv">TV</button>
+                <button id="videoGames">Video Games</button>
+                <button id="cellPhones">Cell Phone</button>
+                <button id="headPhones">Head phones</button>
+
+            </div>
+        </div>
+        <div id="adminSubDiv-1">
+            <div id="formDiv">
+                <h3 id="addProductHeading">Add Products</h3>
+                <form action="" id="form">
+                    <label for="name">
+                        <input type="text" name="" id="name" placeholder="Product Name">
+                    </label>
+                    <label for="image">
+                        <input type="url" name="" id="image" placeholder="Product Image">
+                    </label>
+                    <label for="description">
+                        <input type="text" name="" id="description" placeholder="Product Description">
+                    </label>
+                    <label for="price">
+                        <input type="number" name="" id="price" placeholder="Product Price">
+                    </label>
+                    <label for="actualPrice">
+                        <input type="number" name="" id="actualPrice" placeholder="Actual  Price">
+                    </label>
+                    <label for="ratings">
+                        <input type="number" name="" id="ratings" placeholder="Customer Ratings">
+                    </label>
+                    <label for="totalRatings">
+                        <input type="number" name="" id="totalRatings" placeholder="Total Number Of  Ratings">
+                    </label>
+                    <select name="" id="category">
+                        <option value="">Category</option>
+                        <option value="Laptops">Laptops</option>
+                        <option value="TV">TV</option>
+                        <option value="Video Games">Video Games</option>
+                        <option value="Cell Phone">Cell Phone</option>
+                        <option value="Headphones">Headphones</option>
+                    </select>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Rest Form">
+                </form>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div id="sortinNFilteringDiv"></div>
+        <div id="containerDiv"></div>
+    </section>
+</body>
+</html>
+<script src="./admin.js"></script>

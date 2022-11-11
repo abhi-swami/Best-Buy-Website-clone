@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
+}
+#adminMainDiv{
+    border: 0px solid black;
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+#adminMainDiv>div{
+    border: 0px solid rgb(190, 0, 0);
+    width: 40%;
+    height: 350px;
+    margin-left: 70px;
+    margin: auto;
+}
+#adminSubDiv-1>div{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+#selectCategoryDiv{
+    border: 1px solid rgb(170, 166, 166);
+    margin: auto;
+    width: 30%;
+    height: 90%;
+    border-radius: 5px;
+
+}
+#selectCategoryDiv>h3{
+    text-align: center;
+}
+#selectCategoryDiv>button{
+    margin: auto;
+    border: 1px solid grey;
+    width: 70%;
+    height: 30px;
+}
+
+#formDiv{
+    border: 1px solid rgb(170, 166, 166);
+    margin: auto;
+    width: 50%;
+    height: 93%;
+    border-radius: 5px;
+}
+
+
+#addProductHeading{
+    text-align: center;
+}
+#form{
+    width: 100%;
+    border: 1px solild rgb(183, 46, 46);
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+#form>label{
+    width: 100%;
+    margin-left: 76px;
+}
+#form>select,input{
+    margin:3px  0  2px 0;
+}
+#form>select{
+    width: 70%;
+}
+input[type="text"]{
+    width:70%;
+}
+input[type="number"]{
+    width:70%;
+}
+input[type="url"]{
+    width:70%;
+}
+input[type="submit"]{
+    width:70%;
+}
+input[type="reset"]{
+    width:70%;
+}
+section{
+    border: 0px solid black;
+    width: 100%;
+    height: 1000px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 25% 70%;
+}
+section>div{
+    border:1px solid grey;
+    margin-left: 30px;
+    border-radius: 5px;
+}
+#containerDiv{
+    margin-left: 70px;
+}
