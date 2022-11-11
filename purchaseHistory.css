@@ -1,0 +1,115 @@
+#purchaseHistoryTitleBody{
+    display:flex;
+    /* width:62%; */
+    margin:auto;
+    /* border:1px solid; */
+    justify-content: space-between;
+    margin-top:20px
+}
+body{
+    padding:0px;
+    margin:0px;
+    background-color: rgb(240, 242, 244);
+}
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#fourTextSections{
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    /* border:1px solid; */
+    width:50%;
+    align-items: center;
+    color:rgb(22, 103, 241)
+}
+#fourTextSections>span:hover{
+cursor: pointer;
+text-decoration:underline;
+}
+
+
+#searchAndViewing{
+    display:flex;
+    justify-content: space-between;
+    width:98%;
+    margin:auto;
+}
+#AvSearch{
+    width:400px;
+    height:35px;
+    border-radius:5px;
+    padding-left:10px;
+    border:2px solid rgb(219, 217, 217);
+    transition: 1s;
+}
+#AvSearch:hover{
+    width:410px;
+}
+#AvSearch::-webkit-input-placeholder{
+    color:grey;
+    font-size: 14px;
+}
+#Avbtn{
+    width:150px;
+    height:34px;
+    background-color: #144fb5;
+    border:none;
+    color:white;
+    font-weight: 600;
+    border-radius:5px;
+    transition:0.2s;
+}
+#Avbtn:hover{
+    cursor: pointer;
+    background-color: white;
+    color:#0046BE;
+    border:1px solid #0046BE;
+
+}
+#AvSelect{
+    /* border:1px solid; */
+    width:25%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+#AvSelect>select{
+    height:35px;
+    width:150px;
+    font-size: 14px;
+    border:2px solid rgb(219, 217, 217);
+    border-radius:4px;
+    transition: 0.5s;
+}
+
+#AvContainer{
+    width:62%;
+    margin:auto;
+}
+#threeParts{
+    display:flex;
+    /* border:1px solid; */
+    width:35%;
+    justify-content: space-between;
+    font-size: 15px;
+    margin-top:30px;
+    color:#0046BE;
+    font-weight: 500;
+    margin-bottom:20px;
+    transition:0.3s ease;
+}
+#threeParts>span:hover{
+
+    cursor:pointer;
+    text-decoration: underline;
+    color:rgb(92, 92, 92);
+    
+}
+#ifNoProduct{
+    margin-top:2rem;
+}
+#popularLaptopsDiv{
+margin-top:3rem;
+}
