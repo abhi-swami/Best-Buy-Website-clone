@@ -243,95 +243,165 @@ let removeProduct = (id) => {
 
 
 
-let men_data = [
-   
-    // {
-    //   "jss2573 href": "https://www.maxfashion.in/in/en/SHOP-Max-Green-MAX-Men-Striped-Band-Collar-Slim-Fit-Short-Kurta/p/1000011359476-Green-OLIVEGREEN",
-    //   "product_image": "https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011359476-Green-OLIVEGREEN-1000011359476-15092022_01-2100.jpg",
-    //   "rup": "₹",
-    //   "price": 999,
-    //   "name": "MAX Men Striped Band Collar Slim Fit Short Kurta",
-    
-    // },
+
+let bestSellingProduct=[
     {
-      "jss2573 href": "https://www.maxfashion.in/in/en/SHOP-Max-Olive-Green-MAX-Men-Striped-Band-Collar-Slim-Fit-Short-Kurta/p/1000011722997-Green-OLIVEGREEN",
-      "product_image": "https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011722997-Green-OLIVEGREEN-1000011722997-02092022_01-2100.jpg",
-      "MuiBox-root": "New",
-      "rup": "₹",
-      "name": "MAX Men Striped Band Collar Slim Fit Short Kurta",
-      "price": 799
+        image:`https://pisces.bbystatic.com/image2/BestBuy_US/images/products/4900/4900942_sd.jpg;maxHeight=272;maxWidth=400`,
+        name:"Apple - AirPods Pro (1st generation) with Magsafe Charging Case - White",
+        ratings:4,
+        numberOfRatigs:'13,206',
+        price:209.99,
+        actualPrice:250,
     },
     {
-      "jss2573 href": "https://www.maxfashion.in/in/en/SHOP-Max-Maroon-MAX-Men-Floral-Printed-Mandarin-Collar-Kurta/p/1000011722831-Red-MAROON",
-      "product_image": "https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011722831-Red-MAROON-1000011722831-02092022_01-2100.jpg",
-      "MuiBox-root": "New",
-      "rup": "₹",
-      "name": "MAX Men Floral Printed Mandarin Collar Kurta",
-      "price": 799
+        image:`https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6448/6448758_sd.jpg;maxHeight=272;maxWidth=400`,
+        name:"Insignia™ - 43 Class F30 Series LED 4K UHD Smart Fire TV",
+        ratings:4,
+        numberOfRatigs:'1,544',
+        price:219.99,
+        actualPrice:300,
     },
     {
-      "jss2573 href": "https://www.maxfashion.in/in/en/SHOP-Max-Blue-MAX-Men-Printed-Mandarin-Collar-Kurta/p/1000011722805-Blue-NAVY",
-      "product_image": "https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011722805-Blue-NAVY-1000011722805-26082022_01-2100.jpg",
-      "MuiBox-root": "New",
-      "rup": "₹",
-      "name": "MAX Men Printed Mandarin Collar Kurta",
-      "price": 899
+        image:`https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6500/6500335_sd.jpg;maxHeight=272;maxWidth=400`,
+        name:"Lenovo - Chromebook 3 11.6 HD Laptop - Celeron N4020 - 4GB Memory -",
+        ratings:3,
+        numberOfRatigs:'575',
+        price:139,
+        actualPrice:200,
+    },
+    {
+        image:`https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6509/6509757_sd.jpg;maxHeight=272;maxWidth=400`,
+        name:"Doctor Strange in the Multiverse of Madness [SteelBook][Digital",
+        ratings:4,
+        numberOfRatigs:'705',
+        price:43.99,
+        actualPrice:61,
+    },
+    {
+        image:`https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6472/6472653_rd.jpg;maxHeight=272;maxWidth=400`,
+        name:"ZAGG - InvisibleShield Glass+ Defense Screen Protector for Apple",
+        ratings:5,
+        numberOfRatigs:'1,497',
+        price:24.9,
+        actualPrice:51,
+    },
+    {
+        image:`https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6361/6361905_sd.jpg;maxHeight=272;maxWidth=400`,
+        name:"OtterBox - Commuter Series Case for Apple® iPhone® 11/XR - Black",
+        ratings:5,
+        numberOfRatigs:'1560',
+        price:36.9,
+        actualPrice:70,
     }
+    ,
+    {
+        image:`https://th.bing.com/th/id/OIP.Hr-HcIvUa_RIaA1_Jqe-HgHaN5?pid=ImgDet&w=167&h=313&c=7&dpr=1.3`,
+        name:"Nokia 1100 - Rare series of Nokia phones® 1100 - Black",
+        ratings:5,
+        numberOfRatigs:'17760',
+        price:40,
+        actualPrice:20,
+    },
+    {
+        image:`https://th.bing.com/th/id/OIP.DKHrOC89NIylVxYqRyzjoQHaHa?w=176&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7`,
+        name:"Nokia Lumia  925 Smartphone | Lumia 925, Windows phone - Black",
+        ratings:4,
+        numberOfRatigs:'1560',
+        price:92,
+        actualPrice:120,
+    }
+
+
 ]
 
-let frequentCards = ({product_image, name, price, id}) => {
-
-    let div = document.createElement('div');
-    div.className = 'frequentDiv'
-
-    let img = document.createElement('img');
-    img.src = product_image
 
 
-    let title = document.createElement('p');
-    title.innerText = name
-    title.className = 'frequentName'
-    
 
-    
-    let addToCart = document.createElement('button')
-    addToCart.innerText = 'Add to Card'
-    addToCart.className = 'btnSet'
-
-
-    let prices = document.createElement('h4')
-    prices.innerText = `$${price}`
-    prices.className = 'prices'
-    
-
-    div.append(img, title, prices,addToCart)
-    return div
+let genEle=(tag)=>{
+    return document.createElement(tag)
 }
 
-let renderFrequent = (data) => {
+let appendBestSelling=(data)=>{
+    let container=document.getElementById("product-container")
+    container.innerHTML=null;
+    
+    data.map(({image,name,ratings,numberOfRatigs,price,actualPrice})=>{
 
-    let FBTSlider = document.getElementById('FBTSlider')
 
-    FBTSlider.innerHTML = null;
+        let mainbox=genEle("div")
+        mainbox.classList.add("product-card");
 
-    data.forEach((el)=> {
+        let subBox1=genEle("div")
+        subBox1.classList.add("product-image-div");
+        
+        let img=genEle("img");
+        img.classList.add("product-image")
+        img.src=image;
+        
+        let cartButton=genEle("button");
+        cartButton.classList.add("card-add-to-cart-btn");
+        cartButton.innerText="Add To Cart";
+        subBox1.append(img,cartButton)
 
-        FBTSlider.append(frequentCards(el))
+        let subBox2=genEle("div")
+        subBox2.classList.add("product-info");
+        
+        let brand=genEle("p");
+        brand.innerText=name;
+        brand.classList.add("product-name");
+        
+        let r=genEle("span");
+        // r.innerText=ratings;
+        r.classList.add("product-rating");
+        if(ratings==2){
+            r.innerHTML=`<i class="fa-solid fa-star" style="color: rgb(220, 220, 9);"></i> <i class="fa-solid fa-star" style="color: rgb(220, 220, 9);"></i>`;
+        }else if(ratings==3){
+            r.innerHTML=`<i class="fa-solid fa-star" style="color: rgb(220, 220, 9);"></i> <i class="fa-solid fa-star" style="color: rgb(220, 220, 9);"></i> <i class="fa-solid fa-star" style="color: rgb(220, 220, 9);"style="color: rgb(220, 220, 9);"></i>`;
+        }
+        else if(ratings==4){
+            r.innerHTML=`<i class="fa-solid fa-star" style="color: rgb(220, 220, 9);"></i> <i class="fa-solid fa-star" style="color: rgb(220, 220, 9);"></i> <i class="fa-solid fa-star" style="color: rgb(220, 220, 9);"></i> <i class="fa-solid fa-star" style="color: rgb(220, 220, 9);"></i>`;
+        }else if(ratings==5){
+            r.innerHTML=`<i class="fa-solid fa-star" style="color: rgb(220, 220, 9);"></i> <i class="fa-solid fa-star" style="color: rgb(220, 220, 9);"></i> <i class="fa-solid fa-star" style="color: rgb(220, 220, 9);"></i> <i class="fa-solid fa-star" style="color: rgb(220, 220, 9);"></i> <i class="fa-solid fa-star" style="color: rgb(220, 220, 9);"></i> `;
+        }
+        
+        let nr=genEle("span");
+        nr.innerText=`(${numberOfRatigs})`;
+        nr.classList.add('nr')
+        
+        let product_price=genEle("span");
+        product_price.innerText=`$${price}`;
+        product_price.classList.add("product-price");
+        
+        let product_actual_price=genEle("span");
+        price=+price;
+        product_actual_price.innerText=`$${actualPrice}`;
+        product_actual_price.classList.add("product-actual-price");
+        
+        let priceTag=genEle("p");
+        priceTag.append(product_price,product_actual_price)
+        subBox2.append(brand,r,nr,priceTag)
+
+        mainbox.append(subBox1,subBox2);
+        container.append(mainbox);
+        
 
     })
 }
-renderFrequent(men_data)
+appendBestSelling(bestSellingProduct)
 
+let bestProductContainers = [...document.querySelectorAll('#product-container')];
+let bestnxtBtn = [...document.querySelectorAll('.best-nxt-btn')];
+let bestpreBtn = [...document.querySelectorAll('.best-pre-btn')];
 
-document.getElementById('checkout').addEventListener('click', function(){
+bestProductContainers.forEach((item, i) => {
+    let containerDimensions = item.getBoundingClientRect();
+    let containerWidth = containerDimensions.width;
 
-    location.href= 'checkout.html'
+    bestnxtBtn[i].addEventListener('click', () => {
+        item.scrollLeft += containerWidth;
+    })
 
-    localStorage.setItem('price', JSON.stringify(lsVal))
-
-    let newDate = Date()
-    // console.log(newDate)
-    
-    localStorage.setItem('date', JSON.stringify(newDate))
-
+    bestpreBtn[i].addEventListener('click', () => {
+        item.scrollLeft -= containerWidth;
+    })
 })
