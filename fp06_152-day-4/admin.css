@@ -9,7 +9,6 @@ body{
     flex-direction: row;
     margin-top: 50px;
 }
-
 #adminMainDiv>div{
     border: 0px solid rgb(190, 0, 0);
     width: 40%;
@@ -29,7 +28,6 @@ body{
     width: 30%;
     height: 90%;
     border-radius: 5px;
-
 }
 #selectCategoryDiv>h3{
     text-align: center;
@@ -40,7 +38,6 @@ body{
     width: 70%;
     height: 30px;
 }
-
 #formDiv{
     border: 1px solid rgb(170, 166, 166);
     margin: auto;
@@ -48,8 +45,6 @@ body{
     height: 93%;
     border-radius: 5px;
 }
-
-
 #addProductHeading{
     text-align: center;
 }
@@ -100,10 +95,50 @@ section>div{
     border-radius: 5px;
     border-style:dashed;
 }
+#sortingDiv,#filteringDiv{
+    border:1px solid black;
+    margin: auto;
+    margin-top: 20px;
+    width: 60%;
+    height: auto;
+    padding: 20px;
+}
+#sortingDiv>h3{
+    line-height: 0px;
+}
+#sortingDiv>label{
+    display: flex;
+    flex-direction: row;
+}
+#sortingDiv>select{
+
+    margin: 3px  0 15px 0;
+}
+#sortingDiv>label>i{
+    font-size: 12px;
+    margin: 3px 0 0 3px;
+}
+#starRating>i{
+    color:rgb(255,224,0);
+}
+#peopleNumber>i{
+    color: green;
+}
+#priceSymbol>i{
+    color:rgb(207, 5, 5);
+}
 #containerDiv{
     margin-left: 70px;
 }
-
+#filteringDiv p{
+    color:rgb(207, 5, 5);
+}
+#filteringDiv p span{
+    color: black;
+}
+#filteringDiv p i{
+    color:rgb(255,224,0);
+}
 .productCard{
     display: grid;
     grid-template-columns: 30% 50% 15%;
@@ -111,7 +146,7 @@ section>div{
     margin: auto;
 }
 .productCard>div{
-    border:1px solid red;
+    border:0px solid red;
     margin-top: 20px;
     height:30vh;
 
@@ -139,17 +174,56 @@ section>div{
     margin-top: -18px;
     color:rgb(207, 5, 5)
 }
-
 .actualPrice {
     margin-left: 20px;
     opacity: 0.5;
     text-decoration: line-through;
 }
 .rating>i{
-    color: blue;
+    color:rgb(255,224,0);
+}
+.totalnumbers{
+    font-size: 12px;
+    margin-left: 3px;
+}
+.totalnumbers>i{
+    color: green;
 }
 .spaceHr{
     width: 90%;
     background: lightgrey;
     opacity: 0.2;
+}
+
+.updateDiv>button{
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    background-color: white;
+    border: 1px solid grey;
+    padding: 3px;
+}
+.updateDiv>button:nth-child(1){
+    color: red;
+}
+.updateDiv>button:nth-child(1):hover{
+    color: rgb(255, 255, 255);
+    background-color: red;
+    border: none;
+}
+.updateDiv>button:nth-child(2){
+    color: green;
+}
+.updateDiv>button:nth-child(2):hover{
+    color: rgb(255, 255, 255);
+    background-color:green;
+    border: none;
+}
+.updateDiv>button:nth-child(3){
+    color: blue;
+}
+.updateDiv>button:nth-child(3):hover{
+    color: rgb(255, 255, 255);
+    background-color: blue;
+    border: none;
 }
