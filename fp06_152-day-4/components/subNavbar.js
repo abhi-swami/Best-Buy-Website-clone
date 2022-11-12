@@ -12,9 +12,9 @@ let subNavbar=()=>{
             easy order tracking, rewards, offers and more.</h5>
         </li>
         <li type="none">
-            <button type="abfirstbutton">Sign In</button>
+            <button type="abfirstbutton" id="absignlink">Sign In</button>
             <li></li>
-            <button>Create Account</button>
+            <button id="abloginlink">Create Account</button>
         </li>
         <li type="none">
             <h4>Account</h4>

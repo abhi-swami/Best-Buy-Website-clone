@@ -19,7 +19,6 @@ form.addEventListener("submit",(event)=>{
     let obj={
         name,image,description,price,actualPrice,category,ratings,totalRatings,id,
     }
-    console.log(obj)
     if(category=="Laptops"){
         addNewProducts(LaptopsURL,obj)
     }else if(category=="TV"){
@@ -28,7 +27,7 @@ form.addEventListener("submit",(event)=>{
         addNewProducts(videoGamesURL,obj)
     }else if(category=="Cell Phone"){
         addNewProducts(cellPhoneURL,obj)
-    }else if(category=="Headphones"){
+    }else if(category=="Head phones"){
         addNewProducts(HeadphonesURL,obj)
     }else{
         addNewProducts(universalURL,obj)
@@ -62,6 +61,10 @@ let cellPhones=getElement("cellPhones")
 cellPhones.onclick=()=>{
     appendCategory(cellPhoneURL)
 }
+let headPhones=getElement("headPhones")
+headPhones.onclick=()=>{
+    appendCategory(HeadphonesURL)
+}
 let allCategory=getElement("allCategory")
 allCategory.onclick=()=>{
     appendCategory(universalURL)
@@ -69,47 +72,107 @@ allCategory.onclick=()=>{
 let appendCategory=async(url)=>{
     let res=await fetch(url)
     let data=await res.json();
-    console.log(data)
-    appendData(data)
+    appendData(data,url)
 }
 let genEle=(tag)=>{
     return document.createElement(tag)
 }
-let card=(({name,image,description,price,actualPrice,category,ratings,totalRatings,id})=>{
+let card=(({name,image,description,price,actualPrice,category,ratings,totalRatings,id},url)=>{
+    price=+price;
+    actualPrice=+actualPrice;
     let imageBox=genEle("div")
+    let box=genEle("div")
+    box.classList.add("productCard")
     let img=genEle("img");
     img.src=image;
     img.classList.add("productImage");
-    let productName=genEle("h3");
+    let productName=genEle("h4");
     productName.innerText=name;
     productName.classList.add("productName");
     let desc=genEle("p");
     desc.innerText=description;
     desc.classList.add("productDescription");
     let p=genEle("span");
-    p.innerText=price;
+    p.innerText=`$${price}`;
     p.classList.add("productPrice");
     let ap=genEle("span");
-    ap.innerText=actualPrice;
+    ap.innerText=`$${actualPrice}`;
     ap.classList.add("actualPrice");
     let categ=genEle("p");
     categ.innerText=category;
     categ.classList.add("category");
-    let rat=genEle("p");
+    let rat=genEle("span");
+    if(ratings==2){
+        rat.innerHTML=`<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>`;
+    }else if(ratings==3){
+        rat.innerHTML=`<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>`;
+    }
+    else if(ratings==4){
+        rat.innerHTML=`<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>`;
+    }else if(ratings==5){
+        rat.innerHTML=`<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> `;
+    }
     rat.classList.add("rating");
-    rat.innerText=ratings;
-    let rat_num=genEle("p");
-    rat_num.innerText=totalRatings;
+    let rat_num=genEle("span");
+    rat_num.innerText=`(${totalRatings})`;
     rat_num.classList.add("totalnumbers");
-
-    imageBox.classList.add("imgeDiv")
+    imageBox.classList.add("imageDiv")
+    imageBox.append(img)
     let descBox=genEle("div")
     descBox.classList.add("descDiv")
-    let priceBox=genEle("div")
-    priceBox.classList.add("priceDiv")
+    descBox.append(productName,desc,p,ap,categ,rat,rat_num)
+    let updateBox=genEle("div")
+    updateBox.classList.add("updateDiv")
+    let deleteBtn=genEle("button");
+    deleteBtn.innerText="Delete Product"
+    deleteBtn.onclick=()=>{
+        deleteItem(id,url)
+    }
+    let priceBtn=genEle("button");
+    priceBtn.innerText="Update Price";
+    priceBtn.onclick=()=>{
+        changePrice(id,url)
+    }
+    let ratingBtn=genEle("button");
+    ratingBtn.innerText="Update Rating";
+    ratingBtn.onclick=()=>{
+
+    }
+    updateBox.append(deleteBtn,priceBtn,ratingBtn)
+    box.append(imageBox,descBox,updateBox)
+    return box
 })
-let appendData=(data)=>{
+let appendData=(data,url)=>{
+    let container=document.getElementById("containerDiv");
+    container.innerHTML=null;
     data.map((el)=>{
-        let pro=card(el)
+        let hr=genEle("hr")
+        hr.classList.add("spaceHr")
+        let pro=card(el,url)
+        container.append(pro,hr)
     })
+}
+appendCategory(HeadphonesURL)
+let deleteItem=async(id)=>{
+    await fetch(`${url}/${id}`,{
+        method:"DELETE",
+        headers:{
+            "Content-Type":"application/json"
+        }
+    });
+    appendCategory(url)
+}
+let changePrice=async(id,url)=>{
+    console.log(url)
+    let p=window.prompt("Enter the amount");
+    p=+p;
+    let data={price:p}
+    await fetch(`${url}/${id}`,{
+        method:"PATCH",
+        body:JSON.stringify(data),
+        headers:{
+            "Content-Type":"application/json",
+        }
+    })
+    appendCategory(url)
 }
