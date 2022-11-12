@@ -4,10 +4,7 @@ body{
     /* height: 2000px; */
     font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
 }
-
-
 /* login HTMl */
-
 #SingInDiv>h2{
     text-align: center;
     padding-top: 20px;
@@ -32,7 +29,6 @@ body{
     border:0.1px solid darkgrey;
     color:rgb(12, 10, 10);
 }
-
 .Login{
     color:rgb(7, 6, 6);
     border:0.1px solid black;

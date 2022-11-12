@@ -2,10 +2,8 @@
 body{
     margin: 0px;
     padding: 0px;
-    /* height: 2000px; */
     font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
 }
-
 #singUpDiv>h2{
     text-align: center;
     padding-top: 20px;

@@ -123,7 +123,7 @@ let mainNavbar=()=>{
     </ul>
     <div id="abDiv3"><input type="search" name="" id="abSearchIP" placeholder="Search Best Buy"><div><i class="fa-solid fa-magnifying-glass"></i></div></div>
     <div id="abDiv4" class="hoverContent"><i  id="abStoreLogo" class="fa-solid fa-store"> <span id="abWordAiea">Aiea</span></i></div>
-    <div id="abDiv5" class="hoverContent"><i id="abCartLogo" class="fa-solid fa-cart-shopping"><span id="abWordCart">Cart</span></i></div>`
+    <div id="abDiv5" class="hoverContent"><i id="abCartLogo" class="fa-solid fa-cart-shopping"><span id="abWordCart"><a href="cart.html">Cart</a></span></i></div>`
 }
 
 let mainNav=document.getElementById("abNavbar")

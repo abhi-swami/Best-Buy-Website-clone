@@ -183,6 +183,8 @@ body{
     position: absolute;
     top: 1635px;
     left: 760px;
+    margin-left: 50px;
+    opacity: 0.3;
 }
 
 #abContinueShoppingDiv{
@@ -336,14 +338,14 @@ opacity: 1;
     display: flex;
     margin: auto;
 }
-#innh2{
+.innh2{
     font-size: 20px;
     color:#0457c8; 
 }
-#innp{
+.innp{
     font-size: 13px;
 }
-div>#innh2{
+div>.innh2{
     color: black;
     font-size: 20px;
 }

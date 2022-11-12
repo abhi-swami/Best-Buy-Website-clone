@@ -2,23 +2,13 @@
 import{mainNavbar} from "./components/mainNavbar.js"
 import { subNavbar } from "./components/subNavbar.js";
 import{footerfun} from "./components/footer.js"
-
-let  mainNav=document.getElementById("abNavbar");
-mainNav.innerHTML=mainNavbar()
-
-let  subNav=document.getElementById("abSubNav");
-subNav.innerHTML=subNavbar()
-
-let  footer=document.getElementById("footer");
-footer.innerHTML=footerfun()
-
-
+document.getElementById("abNavbar").innerHTML=mainNavbar()
+document.getElementById("abSubNav").innerHTML=subNavbar()
+document.getElementById("footer").innerHTML=footerfun()
 let abMenuLogo = document.getElementById("abMenuLogo");
 let abDiv2 = document.getElementById("abDiv2");
 let abmenuid = document.getElementById("abmenuid");
 let abclose = document.getElementById("abclose");
-
-
 let count=0;
 abDiv2.addEventListener("click",()=>{
     count++;
@@ -29,30 +19,20 @@ abDiv2.addEventListener("click",()=>{
         abDiv2.style.color="white";
         abDiv2.style.marginLeft="5px"
         abDiv2.style.marginTop="6px";
-
-        
     }else{
         abmenuid.style.display="block";
         abDiv2.innerHTML=`<i class="fa-sharp fa-solid fa-xmark" id="abMenuLogo1"><span id="abMenuWord">Menu</span></i>`
         abDiv2.style.color="white";
         abDiv2.style.marginTop="20px";
         abDiv2.style.marginLeft="5px"
-
     }
 });
-
 abclose.addEventListener("click",()=>{
     abmenuid.style.display="none";
     abDiv2.innerHTML=`<i id="abMenuLogo" class="fa-solid fa-bars">
         <span id="abMenuWord">Menu</span></i>`
 })
-
-
-
-
-
 // sub nav bar account section section
-
 let abSubNavDiv7 =document.getElementById("abSubNavDiv7");
 let abaccountfirstpageid =document.getElementById("abaccountfirstpageid");
 let c=0;
@@ -64,9 +44,14 @@ abSubNavDiv7.addEventListener("click",()=>{
         abaccountfirstpageid.style.display="block";
     }
 });
-
-
-
+let absignlink = document.getElementById("absignlink");
+absignlink.addEventListener("click",()=>{
+    window.location.href="signUp.html";
+});
+let abloginlink = document.getElementById("abloginlink");
+abloginlink.addEventListener("click",()=>{
+    window.location.href="login.html";
+});
 let arr=[
     {
         ProductImage:`https://pisces.bbystatic.com/image2/BestBuy_US/dam/MMT-611301-ghp-img-icons-laptops-686b0d25-dbcf-484f-8c88-046275bf8ef5.jpg;maxWidth=220`,
@@ -141,7 +126,6 @@ let arr=[
         productName:"Health & Fitness"
     },
 ]
-
 let newArrival=[
     {
         productImage:`https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6520/6520136_rd.jpg;maxHeight=400;maxWidth=400`,
@@ -164,9 +148,6 @@ let newArrival=[
         productName:"Nintendo Switch Online + Expansion Pack "
     },
 ]
-
-
-
 let generateElement=(tag)=>{
     return document.createElement(tag)
 }
@@ -190,7 +171,6 @@ let appendData=(data)=>{
     })
 };
 appendData(arr);
-
 let appendNewArrival=(data)=>{
     let container=document.getElementById("abNewArrivalSubDiv2")
     container.innerHTML=null;

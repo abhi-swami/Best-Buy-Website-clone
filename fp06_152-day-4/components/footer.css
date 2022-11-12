@@ -22,12 +22,12 @@
     
 }
 
-.incard>#inp:hover{
+.incard>.inp:hover{
     cursor:pointer;
     color: #001e73; ;
     text-decoration: underline;
 }
-#inhr{
+.inhr{
     width: 95%;
 }
 
@@ -37,7 +37,7 @@
     display: flex;
     justify-content: space-between;
 } 
-#inp{
+.inp{
     color: #5c91d8; ;
 }
 #insign{
