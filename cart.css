@@ -269,11 +269,12 @@ fieldset>button{
     
 }
 .productDiv>img{
-    width:7%;
-    height:70px;
+    width:9%;
+    
+    object-fit: contain;
 }
 .productName{
-    width:15%;
+    width:23%;
     font-size: 13px;
     margin:1px 20px 0px 30px;
     color:#0046BE
@@ -292,7 +293,7 @@ fieldset>button{
     color: #0046BE;
 }
 .descText{
-    width:20%;
+    width:17%;
     font-size: 13px;
     margin:2px 60px 0px 25px;
 }
@@ -304,7 +305,7 @@ fieldset>button{
     margin:10px 20px;
 }
 .prices{
-    margin: 10px 1px 1px 21px;
+    margin: 12px 1px 1px 0px;
 }
 #hiddenHurrray{
     color:green;
@@ -409,11 +410,13 @@ fieldset>button{
     text-transform: capitalize;
     border: none;
     outline: none;
-    background: #fff;
+    background: white;
     border-radius: 5px;
     transition: 0.2s;
     cursor: pointer;
     opacity: 0;
+    color:#0046BE;
+    border: 2px solid #0046BE
   }
   
   .product-card:hover .card-add-to-cart-btn {
@@ -421,7 +424,7 @@ fieldset>button{
   }
   
   .card-add-to-cart-btn:hover {
-    background: #fa8080;
+    background:#001E73;
     color: #fff;
   }
   
@@ -436,7 +439,8 @@ fieldset>button{
     overflow:hidden;
     font-size: 13px;
     color:#0046BE;
-    
+    height:45px;
+
   }
   .product-name:hover{
     cursor:pointer;
@@ -460,7 +464,6 @@ fieldset>button{
   .product-price {
     font-weight: 900;
     font-size: 17px;
-    /* color:rgb(21, 65, 225) */
   }
   
   .product-actual-price {
@@ -504,4 +507,14 @@ fieldset>button{
   .best-nxt-btn:hover img {
     opacity: 1;
   }
-  
+  .productCategories{
+    font-size: 12px;
+    color:#0046BE;
+    margin-top: 100px;
+    margin-left:-250px;
+    width:20%;
+  }
+  .productCategories:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }

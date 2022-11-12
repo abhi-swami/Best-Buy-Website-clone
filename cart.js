@@ -1,42 +1,27 @@
-let mens = [
-   
-    {
-      "jss2573 href": "https://www.maxfashion.in/in/en/SHOP-Max-Green-MAX-Men-Striped-Band-Collar-Slim-Fit-Short-Kurta/p/1000011359476-Green-OLIVEGREEN",
-      "product_image": "https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011359476-Green-OLIVEGREEN-1000011359476-15092022_01-2100.jpg",
-      "rup": "₹",
-      "price": 99,
-      "name": "MAX Men Striped Band Collar Slim Fit Short Kurta",
-      "id": 1
-    
-    },
-    {
-      "jss2573 href": "https://www.maxfashion.in/in/en/SHOP-Max-Olive-Green-MAX-Men-Striped-Band-Collar-Slim-Fit-Short-Kurta/p/1000011722997-Green-OLIVEGREEN",
-      "product_image": "https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011722997-Green-OLIVEGREEN-1000011722997-02092022_01-2100.jpg",
-      "MuiBox-root": "New",
-      "rup": "₹",
-      "name": "MAX Men Striped Band Collar Slim Fit Short Kurta",
-      "price": 55,
-      "id": 2
-    },
-    {
-      "jss2573 href": "https://www.maxfashion.in/in/en/SHOP-Max-Maroon-MAX-Men-Floral-Printed-Mandarin-Collar-Kurta/p/1000011722831-Red-MAROON",
-      "product_image": "https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011722831-Red-MAROON-1000011722831-02092022_01-2100.jpg",
-      "MuiBox-root": "New",
-      "rup": "₹",
-      "name": "MAX Men Floral Printed Mandarin Collar Kurta",
-      "price": 79,
-      "id": 3
-    },
-    {
-      "jss2573 href": "https://www.maxfashion.in/in/en/SHOP-Max-Blue-MAX-Men-Printed-Mandarin-Collar-Kurta/p/1000011722805-Blue-NAVY",
-      "product_image": "https://lmsin.net/cdn-cgi/image/h=493,w=333,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/max/1000011722805-Blue-NAVY-1000011722805-26082022_01-2100.jpg",
-      "MuiBox-root": "New",
-      "rup": "₹",
-      "name": "MAX Men Printed Mandarin Collar Kurta",
-      "price": 89,
-      "id": 4
+// 
+
+const url = "https://polar-atoll-29187.herokuapp.com/"
+
+
+let getData = async () => {
+
+    try {
+
+        let res = await fetch(`${url}api/cart`)
+    res = await res.json()
+    console.log(res)
+    renderDom(res)
+        
+    } catch (error) {
+        console.log(error)
     }
-]
+    
+}
+getData()
+
+    
+
+
 
 let productPriceSum = 0;
 
@@ -78,46 +63,43 @@ document.getElementById('specialOffer').addEventListener('click', function(){
 });
 
 
-let totalSum;
-let ns = 0;
-let lsVal = 0;
+let totalSum = 0;
+let d = 0
+
+
 document.getElementById('availOffer').addEventListener('click', function(){
 
-    let disc4 = document.getElementById('disc4').value;
-    
     let hiddenHurrray = document.getElementById('hiddenHurrray')
     hiddenHurrray.style.display = 'block'
 
-ns = Math.floor(ns - ((4*ns)/100))
+    
+    let ele = document.getElementsByName('offer')
+    for(let i=0; i<ele.length; i++){
+        if(ele[i].checked){
+            d = +ele[i].value
+            
+
+}
+
+    }
     
 
-    calculation(ns, 0)
-    
-    
 })
 
 
-// All Calculation functions ------------------
+
+
 let itemTotal = document.getElementById('itemTotal');
 let showTotal = document.getElementById('showTotal');
 
-let calculation = (val, ns) => {
 
 
-    itemTotal.innerText = `$${val+ns}`
-    showTotal.innerText = `$${val+ns}`
-
-    lsVal = val+ns
-}
- 
 
 
-let newVal = 0;
 
-
-let arr = []
+let priceObject = {}
 // appending Functions  ---------------------
-let cards = ({product_image, name, price, id}) => {
+let cards = ({image, name, price, id, category}) => {
 
     let div = document.createElement('div');
     div.className = 'productDiv'
@@ -130,7 +112,24 @@ let cards = ({product_image, name, price, id}) => {
     descText.className = 'descText'
 
     let img = document.createElement('img');
-    img.src = product_image
+    img.src = image
+    
+    priceObject[id] = +price 
+
+    
+
+    let t = 0
+
+    for(let value in priceObject){
+        
+        t += priceObject[value]
+    }
+  
+
+
+    totalSum = t
+
+    
 
 
     let title = document.createElement('p');
@@ -144,41 +143,37 @@ let cards = ({product_image, name, price, id}) => {
         let options = document.createElement('option')
         options.innerText = i+1
 
+
+
+
         quantityBtn.onchange = () => {
         
             let quantity = +quantityBtn.options[quantityBtn.selectedIndex].value
 
             
-            let quantityPrice = (quantity-1)*price
+            let quantityPrice = (quantity)*(+price)
 
-            let count = 0;
-            for(let i=0; i<30; i++){
-
-            if(arr[i] == id){
-
-                count++
-                break
-            }
-        }
         
-        let val=0
-        
-            if(count == 0){
-                newVal+=quantityPrice
-                console.log(newVal)
-                arr.push(id)
-                count = 0
-                calculation(newVal, ns)
-            }else{
-
-
-                // val = quantityPrice
-                
-                console.log(newVal)
-                count = 0 
-            }
-        }
             
+    
+            
+            t = 0
+            for(let value in priceObject){
+        
+                if(id == value){
+                    priceObject[value] = quantityPrice
+                }
+
+                t += priceObject[value]
+             
+            }
+            totalSum = t
+            itemTotal.innerText = `$${totalSum}`
+            showTotal.innerText = `$${totalSum}`
+        }
+
+        
+                    
             
         
         quantityBtn.append(options)
@@ -204,16 +199,27 @@ let cards = ({product_image, name, price, id}) => {
     prices.innerText = ` $ ${price}`
     prices.className = 'prices'
 
-    ns+=price
+    
 
-    itemTotal.innerText = `$${ns}`
-    showTotal.innerText = `$${ns}`
+// console.log(totalSum)
+    itemTotal.innerText = `$${totalSum}`
+    showTotal.innerText = `$${totalSum}`
+    
+    let pText = document.createElement('p');
+    if(category == "Laptops"){
+        
+        pText.innerText = 'Click here to add insurance in just $99 for this Item'
+        pText.className = 'productCategories'
+    }
+    
     div2.append(removeBtn, saveBtn)
 
-    div.append(img,title, descText, quantityBtn, div2, prices)
+    div.append(img,title, descText, pText, quantityBtn, div2, prices)
 
     return div;
 }
+
+
 
 let cont = document.getElementById('container')
 
@@ -221,7 +227,7 @@ let renderDom = (data) => {
 
     cont.innerHTML = null;
 
-    data.forEach((el) => {
+   data.forEach((el) => {
 
     let divForm = cards(el)
 
@@ -231,13 +237,17 @@ let renderDom = (data) => {
 
 }
 
-renderDom(mens)
 
-let removeProduct = (id) => {
 
-    let ind = id - 1
-    mens.splice(ind, 1)
-    console.log(mens)
+let removeProduct = async(id) => {
+
+    await fetch(`${url}/api/id`, {
+        method: "DELETE"
+    })
+
+    
+    getData()
+
 }
 
 
@@ -341,6 +351,7 @@ let appendBestSelling=(data)=>{
         let cartButton=genEle("button");
         cartButton.classList.add("card-add-to-cart-btn");
         cartButton.innerText="Add To Cart";
+
         subBox1.append(img,cartButton)
 
         let subBox2=genEle("div")
@@ -404,4 +415,19 @@ bestProductContainers.forEach((item, i) => {
     bestpreBtn[i].addEventListener('click', () => {
         item.scrollLeft -= containerWidth;
     })
+})
+
+
+let checkout = document.getElementById('checkout')
+
+checkout.addEventListener('click', function(){
+
+    let d = Date()
+    console.log(d)
+
+    localStorage.setItem('date', JSON.stringify(d))
+
+    location.href = 'checkout.html'
+
+    
 })
