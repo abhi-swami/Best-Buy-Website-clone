@@ -23,7 +23,7 @@ getData()
 
 
 
-let productPriceSum = 0;
+
 
 
 
@@ -241,7 +241,7 @@ let renderDom = (data) => {
 
 let removeProduct = async(id) => {
 
-    await fetch(`${url}/api/id`, {
+    await fetch(`${url}api/cart/${id}`, {
         method: "DELETE"
     })
 
