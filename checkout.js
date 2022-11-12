@@ -24,6 +24,23 @@ let data = JSON.parse(localStorage.getItem('price'));
 let showPrice = document.getElementById('showPrice')
 let totalPrice = document.getElementById('totalPrice')
 
-showPrice.innerText = `$${data}`
-totalPrice.innerText = `$${data}`
+let setPrice = async(url) => {
 
+
+    let res = await fetch(url)
+    res = await res.json()
+
+    
+
+    let sum = 0;
+    res.forEach(el => {
+        sum+= el.price
+    })
+
+    console.log(sum)
+
+    showPrice.innerText = `$${sum}`
+    totalPrice.innerText = `$${sum}`
+
+}
+setPrice(url)
