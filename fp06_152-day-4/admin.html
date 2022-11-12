@@ -6,9 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./admin.css">
+    <link rel="stylesheet" href="./components/mainNavbar.css">
+    <link rel="stylesheet" href="./components/subNavbar.css">
+    <link rel="stylesheet" href="./components/footer.css">
     <script src="https://kit.fontawesome.com/4b85608a8b.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
+    <nav id="abNavbar"></nav>
+    <div id="abSubNav"></div>
+    <input type="text" name="" id="searchInput" placeholder="search product">
     <div id="adminMainDiv">
         <div id="adminSubDiv-1">
             <div id="selectCategoryDiv">
@@ -19,6 +26,7 @@
                 <button id="videoGames">Video Games</button>
                 <button id="cellPhones">Cell Phone</button>
                 <button id="headPhones">Head phones</button>
+
             </div>
         </div>
         <div id="adminSubDiv-1">
@@ -61,9 +69,42 @@
         </div>
     </div>
     <section>
-        <div id="sortinNFilteringDiv"></div>
+        <div id="sortinNFilteringDiv">
+            <div id="sortingDiv">
+                <h3>Sort &#8628</h3>
+                <label for="sortUsingRatings" id="starRating">Star Ratings<i class="fa-solid fa-star"></i></label>
+                <select name="" id="sortUsingRatings">
+                    <option value="low">Low To High</option>
+                    <option value="high">High To Low</option>
+                </select>
+                <label for="sortUsingUserRatings"id="peopleNumber">User Ratings <i class="fa-solid fa-people-group"></i></label>
+                <select name="" id="sortUsingUserRatings">
+                    <option value="low">Low To High</option>
+                    <option value="high">High To Low</option>
+                </select>
+                <label for="sortUsingPrice"id="priceSymbol">Price <i class="fa-solid fa-sack-dollar"></i></label>
+                <select name="" id="sortUsingPrice">
+                    <option value="low">Low To High</option>
+                    <option value="high">High To Low</option>
+                </select>
+            </div>
+            <div id="filteringDiv">
+                <h3>Filter  &#8628</h3>
+                <p><input type="radio" name="myprice" id="price5" ><span>Price</span> < $5 </p>
+                <p><input type="radio" name="myprice" id="price5-10"><span>Price</span>  $6-$10 </p>
+                <p><input type="radio" name="myprice" id="price11-50"><span>Price</span>  $11 -$50 </p>
+                <p><input type="radio" name="myprice" id="price51-100"><span>Price</span>  $50 -$100 </p>
+                <p><input type="radio" name="myprice" id="price101-200"><span>Price</span>  $100 -$200 </p>
+                <p><input type="radio" name="myprice" id="price201"><span>Price</span>  > $200 </p>
+                <p><input type="radio" name="myprice" id="star3"><span>Ratings</span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                <p><input type="radio" name="myprice" id="star4"><span>Ratings</span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                <p><input type="radio" name="myprice" id="star5"><span>Ratings</span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+            </div>
+
+        </div>
         <div id="containerDiv"></div>
     </section>
+    <footer id="footer"></footer>
 </body>
 </html>
-<script src="./admin.js"></script>
+<script  type="module" src="./admin.js"></script>
