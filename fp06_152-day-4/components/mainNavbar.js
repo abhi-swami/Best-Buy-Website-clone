@@ -1,5 +1,5 @@
 let mainNavbar=()=>{
-    return `<div id="abDiv1" class="hoverContent"><span>BEST</span> <span>BUY</span><i id="tradeMark" class="fa-solid fa-trademark"></i><img src="./images/Screenshot 2022-11-08 233914.png" alt=""></div>
+    return `<div id="abDiv1" class="hoverContent"><span>BEST</span> <span>BUY</span><i id="tradeMark" class="fa-solid fa-trademark"></i><img src="./images/Screenshot 2022-11-08 233914.png" alt="">  </div>
     <div id="abDiv2" class="hoverContent">
         <i id="abMenuLogo" class="fa-solid fa-bars">
         <span id="abMenuWord">Menu</span></i>

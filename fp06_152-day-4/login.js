@@ -1,15 +1,10 @@
 import { otherNavbar,otherFooter } from "./components/otherNavbar.js";
 
-
 let Navbar=document.getElementById("otherNavbar");
 Navbar.innerHTML=otherNavbar();
 
-
 let footerSec=document.getElementById("footerSection");
 footerSec.innerHTML=otherFooter();
-
-
-
 
 class User{
     constructor() {
@@ -40,21 +35,16 @@ class User{
     }
 }
 
-
 let u1 = new User();
 let l=document.getElementById("Login")
 l.onclick=()=>{
     Login();
 }
-
 function Login() {
     let username=document.getElementById("username").value
     let password=document.getElementById("password").value
     u1.Login(username, password);
 }
-
-
-
 
 async function getProfile(username, token) {
     let api = `https://masai-api-mocker.herokuapp.com/user/${username}`;
@@ -67,7 +57,12 @@ async function getProfile(username, token) {
     let data = await res.json();
     console.log(data);
     alert(`Dear,${data.name} your login is successfull`)
-    window.location.href="index.html"
+    if(data.name == "admin123"){
+        window.location.href="admin.html"
+    }else{
+        window.location.href="index.html"
+    }
+    
 }
 
 

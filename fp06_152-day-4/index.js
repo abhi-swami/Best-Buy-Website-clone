@@ -46,11 +46,11 @@ abSubNavDiv7.addEventListener("click",()=>{
 });
 let absignlink = document.getElementById("absignlink");
 absignlink.addEventListener("click",()=>{
-    window.location.href="signUp.html";
+    window.location.href="login.html";
 });
 let abloginlink = document.getElementById("abloginlink");
 abloginlink.addEventListener("click",()=>{
-    window.location.href="login.html";
+    window.location.href="signUp.html";
 });
 let arr=[
     {
@@ -450,3 +450,36 @@ bestProductContainers.forEach((item, i) => {
         item.scrollLeft -= containerWidth;
     })
 })
+
+// search products
+let id;
+let searchInput1=document.getElementById("abSearchIP");
+searchInput1.oninput=()=>{
+        if(id){
+            clearTimeout(id)
+        }
+        id=setTimeout(()=>{
+            let q=searchInput1.value
+            searchProduct(q)
+        },1000)
+}
+let searchProduct=async(q)=>{
+    let res=await fetch(`http://localhost:3000/api/allProducts`)
+    let data=await res.json();
+    myfun(data,q,`http://localhost:3000/api/allProducts`);
+}
+let myfun=(data,q,url)=>{
+    let arr=[];
+    if(q!==""){
+        for(let i=0;i<data.length;i++){
+            let proname=data[i].name
+            if(proname.includes(q)){
+                arr.push(data[i]);
+                appendData(arr,url)
+                localStorage.setItem("olxData",JSON.stringify(arr))
+                console.log(data[i]);
+                window.location.href="search.html"
+            }
+        }
+    }
+}

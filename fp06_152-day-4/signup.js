@@ -44,6 +44,8 @@ class User{
                 })
                 let data = await res.json();
                 console.log("data", data)
+                alert("Registration Sucessful")
+                window.location.href="login.html";
             }
             catch (err) {
                 console.log("error", err)
