@@ -11,6 +11,11 @@ subNav.innerHTML=subNavbar()
 let  footer=document.getElementById("footer");
 footer.innerHTML=footerfun()
 
+let abDiv1=document.getElementById("abDiv1")
+abDiv1.onclick=()=>{
+    window.location.href="index.html"
+}
+
 
 let LaptopsURL=`http://localhost:3000/api/Laptops`;
 let TVURL=`http://localhost:3000/api/TV`;
@@ -18,68 +23,6 @@ let videoGamesURL=`http://localhost:3000/api/videoGames`;
 let cellPhoneURL=`http://localhost:3000/api/cellPhone`;
 let HeadphonesURL=`http://localhost:3000/api/Headphones`;
 let universalURL=`http://localhost:3000/api/allProducts`;
-let form=document.getElementById("form");
-form.addEventListener("submit",(event)=>{
-    event.preventDefault();
-    let name=form.name.value
-    let image=form.image.value;
-    let description=form.description.value;
-    let price=form.price.value;
-    price=+price
-    let actualPrice=form.actualPrice.value;
-    actualPrice=+actualPrice
-    let ratings=form.ratings.value;
-    ratings=+ratings
-    let totalRatings=form.totalRatings.value;
-    totalRatings=+totalRatings
-    let category=document.getElementById("category").value;
-    let id=Date.now()+Math.ceil(Math.random()*100);
-    let obj={
-        name,image,description,price,actualPrice,category,ratings,totalRatings,id,
-    }
-    if(category=="Laptops"){
-        addNewProducts(LaptopsURL,obj)
-    }else if(category=="TV"){
-        addNewProducts(TVURL,obj)
-    }else if(category=="Video Games"){
-        addNewProducts(videoGamesURL,obj)
-    }else if(category=="Cell Phone"){
-        addNewProducts(cellPhoneURL,obj)
-    }else if(category=="Head phones"){
-        addNewProducts(HeadphonesURL,obj)
-    }else{
-        addNewProducts(universalURL,obj)
-    }
-});
-let addNewProducts=async(url,obj)=>{
-    let category=obj.category;
-    await fetch(url,{
-        method:"POST",
-        body:JSON.stringify(obj),
-        headers:{
-            "Content-Type":"application/json"
-        },
-    });
-    if(category=="Laptops"){
-    appendCategory(LaptopsURL)
-    sortNFilter(LaptopsURL)
-    }else if(category=="TV"){
-        appendCategory(TVURL)
-        sortNFilter(TVURL)
-    }else if(category=="Video Games"){
-        appendCategory(videoGamesURL)
-        sortNFilter(videoGamesURL)
-    }else if(category=="Cell Phone"){
-        appendCategory(cellPhoneURL)
-        sortNFilter(cellPhoneURL)
-    }else if(category=="Head phones"){
-        appendCategory(HeadphonesURL)
-        sortNFilter(HeadphonesURL)
-    }else{
-    appendCategory(universalURL)
-        sortNFilter(universalURL)
-    }
-}
 let getElement=(id)=>{
     return document.getElementById(id)
 }
@@ -116,6 +59,7 @@ allCategory.onclick=()=>{
 let appendCategory=async(url)=>{
     let res=await fetch(url)
     let data=await res.json();
+    myfun(data);
     appendData(data,url)
 }
 let genEle=(tag)=>{
@@ -186,27 +130,21 @@ let card=(({name,image,description,price,actualPrice,category,ratings,totalRatin
     let descBox=genEle("div")
     descBox.classList.add("descDiv")
 
-    descBox.append(productName,desc,p,ap,categ,rat,rat_num)
+    descBox.append(productName,desc,p,ap,categ,rat,rat_num,DeliveryBox)
     
     let updateBox=genEle("div")
     updateBox.classList.add("updateDiv")
 
-    let deleteBtn=genEle("button");
-    deleteBtn.innerText="Delete Product"
-    deleteBtn.onclick=()=>{
-        deleteItem(id,url)
+    let shopping_icon = genEle("span");
+    shopping_icon.innerHTML=`<i class="fa-solid fa-cart-shopping"></i>`
+    shopping_icon.classList.add("shopping_icon");
+    let addProduct=genEle("button");
+    addProduct.setAttribute("class","addProduct");
+    addProduct.innerText="Add Product"
+    addProduct.onclick=()=>{
     }
-    let priceBtn=genEle("button");
-    priceBtn.innerText="UpdatePrice";
-    priceBtn.onclick=()=>{
-        changePrice(id,url)
-    }
-    let ratingBtn=genEle("button");
-    ratingBtn.innerText="Update Rating";
-    ratingBtn.onclick=()=>{
-        changeRatings(id,url)
-    }
-    updateBox.append(deleteBtn,priceBtn,ratingBtn)
+    updateBox.append(shopping_icon,addProduct)
+    updateBox.setAttribute("class","updateBox");
     box.append(imageBox,descBox,updateBox)
     return box
 })
@@ -220,44 +158,9 @@ let appendData=(data,url)=>{
         container.append(pro,hr)
     })
 }
-appendCategory(HeadphonesURL)
+// appendCategory(HeadphonesURL);
 
 
-let deleteItem=async(id,url)=>{
-    await fetch(`${url}/${id}`,{
-        method:"DELETE",
-        headers:{
-            "Content-Type":"application/json"
-        }
-    });
-    appendCategory(url)
-}
-let changePrice=async(id,url)=>{
-    let p=window.prompt("Enter the amount");
-    p=+p;
-    let data={price:p}
-    await fetch(`${url}/${id}`,{
-        method:"PATCH",
-        body:JSON.stringify(data),
-        headers:{
-            "Content-Type":"application/json",
-        }
-    })
-    appendCategory(url)
-}
-let changeRatings=async(id,url)=>{
-    let p=window.prompt("Enter the New ratings");
-    p=+p;
-    let data={ratings:p}
-    await fetch(`${url}/${id}`,{
-        method:"PATCH",
-        body:JSON.stringify(data),
-        headers:{
-            "Content-Type":"application/json",
-        }
-    })
-    appendCategory(url)
-}
 
 let sortNFilter=(url)=>{
     let sortUsingRatings=getElement("sortUsingRatings");
@@ -270,7 +173,6 @@ let sortNFilter=(url)=>{
             sortingFunction(newUrl);
         }
     }
-
     let sortUsingUserRatings=getElement("sortUsingUserRatings");
     sortUsingUserRatings.onclick=()=>{
         if(sortUsingUserRatings.value=="low"){
@@ -291,7 +193,6 @@ let sortNFilter=(url)=>{
             sortingFunction(newUrl);
         }
     }
-
     let price5=getElement("price5");
     let price5_10=getElement("price5-10");
     let price11_50=getElement("price11-50");
@@ -368,3 +269,8 @@ let myfun=(data,q,url)=>{
         }
     }
 }
+
+let LSData=JSON.parse(localStorage.getItem("olxData"));
+appendData(LSData,universalURL);
+console.log(LSData)
+

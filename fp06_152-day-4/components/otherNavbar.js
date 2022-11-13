@@ -1,5 +1,5 @@
 let otherNavbar=()=>{
-    return `    <div id="in4header">
+    return `    <a href="index.html"><div id="in4header">
     <div id="in4card1">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtovwVmfMDncJzLPRnbNzBkiJ8xnSDcNunH06gSr5l&s" alt="">
     </div>
@@ -10,7 +10,7 @@ let otherNavbar=()=>{
 </div>
 <div id="in4main">
     <div id="in4signmain"></div>
-</div>`
+</div><a>`
 }
 
 let otherFooter=()=>{
