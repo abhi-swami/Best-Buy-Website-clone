@@ -20,7 +20,7 @@ class User{
         
     }
     #checkPassword(password) {
-        return password.length>8 ? true: false;
+        return password.length>2 ? true: false;
         
     }
     async SignUp(n, e, u, p, m, d) {

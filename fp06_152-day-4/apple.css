@@ -1,0 +1,191 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
+}#afntda {
+
+    width: 100%;
+    height: 500px;
+    background-image: url('https://pisces.bbystatic.com/image2/BestBuy_US/dam/custom_fluid_lg_ipad-380413f2-9e15-4742-bfd0-b154c2d4f55c.jpg');
+    margin-bottom: 80px;
+
+}
+
+#afntda h1 {
+
+    font-size: 45px;
+    color: #1D252C;
+    margin: 0px 0px 16px;
+
+}
+
+.img1 {
+
+    margin-left: 200px;
+
+}
+
+.afnldm {
+
+    padding: 150px 0px 0px 800px;
+
+}
+
+.afnldm button {
+
+    color: #fff;
+    background-color: #0046BE;
+    cursor: pointer;
+    font-size: 13px;
+    margin: 50px 0px 0px 220px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 1px solid #0046BE;
+
+}
+
+.afnldm button:hover {
+
+    background-color: #1f3764;
+
+}
+
+.afnldm p {
+
+    font-size: 11px;
+    margin: 125px 0px 0px 200px ;
+    color: #1D252C;
+
+}
+
+#afnUp {
+
+    width: 99%;
+    margin: auto;
+    background-image: url('https://pisces.bbystatic.com/image2/BestBuy_US/dam/custom_fluid_xl_mmt-599505-715e51c3-2718-4a87-a9b7-1dd78586d130.jpg');
+    height: 500px;
+    text-align: center;
+    margin-top: 80px;
+
+}
+
+#afnUp .afnam {
+
+    padding: 100px 0px 0px 800px;
+
+}
+
+#afnUp h1 {
+
+    font-size: 35px;
+    color: #1D252C;
+
+}
+
+.afnam button {
+
+    color: white;
+    background-color: #0046BE;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid #0046BE;
+    margin-top: 50px;
+
+}
+
+.afnam button:hover {
+
+    background-color: #1f3764;
+
+}
+
+#afnipne {
+
+    display: flex;
+    align-content: center;
+    width: 95%;
+    margin: auto;
+    margin-top: 50px;
+
+}
+
+#afnipne img {
+
+    width: 200px;
+    height: 200px;
+
+}
+
+#afnipne p {
+
+    cursor: pointer;
+    color: #0046BE;
+    font-size: 13px;
+
+}
+
+#afnipne h5 {
+
+    color: #040C13;
+    font-size: 13px;
+    padding: 0px 100px 0px 0px;
+
+}
+
+#afnipne h6 {
+
+    color: #55555A;
+    font-size: 11px;
+    padding: 0px 100px 0px 0px;
+
+}
+
+#afnipne button {
+
+    color: white;
+    background-color: #0046BE;
+    cursor: pointer;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 1px solid #0046BE;
+
+}
+
+#afnipne button:hover {
+
+    text-decoration: underline;
+    background-color: #1f3764;
+
+}
+
+#afnsas {
+
+    background-image: url('https://pisces.bbystatic.com/image2/BestBuy_US/dam/MMT-461312_xlarge2-bd23cf18-d61c-4fac-97f8-136cdb0a2ce5.jpg');
+    height: 500px;
+
+}
+
+.afnscreen {
+    
+    padding: 100px 0px 0px 900px;
+
+}
+
+.afnscreen button {
+
+    color: white;
+    background-color: #0046BE;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid #0046BE;
+    margin-top: 50px;
+
+}

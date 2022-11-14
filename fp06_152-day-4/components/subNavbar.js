@@ -46,7 +46,7 @@ let subNavbar=()=>{
         </li>
     </ul>
     <div id="abSubNavDiv8" class="hoverContent">Recently Viewed</div>
-    <div id="abSubNavDiv9" class="hoverContent">Order Status </div>
+    <div id="abSubNavDiv9" class="hoverContent"> <a href="./purchaseHistory.html">Order Status</a>  </div>
     <div id="abSubNavDiv10" class="hoverContent">Saved Items </div>
 </div>`
 }

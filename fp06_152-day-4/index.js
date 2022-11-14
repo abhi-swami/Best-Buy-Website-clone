@@ -5,6 +5,25 @@ import{footerfun} from "./components/footer.js"
 document.getElementById("abNavbar").innerHTML=mainNavbar()
 document.getElementById("abSubNav").innerHTML=subNavbar()
 document.getElementById("footer").innerHTML=footerfun()
+let abDiv1=document.getElementById("abDiv1")
+abDiv1.onclick=()=>{
+    window.location.href="index.html"
+}
+let abSubNavDiv3=document.getElementById("abSubNavDiv3")
+abSubNavDiv3.onclick=()=>{
+    window.location.href="dealofday.html"
+}
+
+let dealOfThedayImage=document.getElementById("dealOfThedayImage")
+dealOfThedayImage.onclick=()=>{
+    window.location.href="dealofday.html"
+}
+let iphoneImage=document.getElementById("iphoneImage")
+iphoneImage.onclick=()=>{
+    window.location.href="apple.html"
+}
+
+
 let abMenuLogo = document.getElementById("abMenuLogo");
 let abDiv2 = document.getElementById("abDiv2");
 let abmenuid = document.getElementById("abmenuid");
@@ -464,9 +483,9 @@ searchInput1.oninput=()=>{
         },1000)
 }
 let searchProduct=async(q)=>{
-    let res=await fetch(`http://localhost:3000/api/allProducts`)
+    let res=await fetch(`https://mighty-savannah-51128.herokuapp.com/api/allProducts`)
     let data=await res.json();
-    myfun(data,q,`http://localhost:3000/api/allProducts`);
+    myfun(data,q,`https://mighty-savannah-51128.herokuapp.com/api/allProducts`);
 }
 let myfun=(data,q,url)=>{
     let arr=[];

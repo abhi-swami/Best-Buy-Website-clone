@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <script src="https://kit.fontawesome.com/24c494a6b6.js"crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/74886d4582.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/umberto" type="text/css"/>
+    <script src="https://kit.fontawesome.com/4b85608a8b.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="popUpBG">
+
+        <div id="popData">
+            
+                <Fieldset>
+                    <legend style="color:#0046BE"><i >Choose any offer</legend>
+                    <div id="bgPop">
+                        <p>You got two offers according to your cart items</p>
+                    </div><br>
+                    <input type="radio" name="offer" value="4" id="disc4"> <label for="">Get 4% instant discount on using HDFC credit card</label><br><br>
+                    <input type="radio" name="offer" value="7" id="disc7"> <label for="">Get 7% discount on purchasing item, costs more than 70k</label><br>
+                    </i>
+                    <button class="btnSet" id="availOffer">Avail Offer</button>
+                </Fieldset>
+            
+
+        </div>
+
+    </div>
+
+    <!--                 Gift Section                -->
+    
+    <div id="avGiftingMadeEasy">
+        <img src="https://i.ibb.co/xHM9qyH/w8t-Sbtyfv-NSHw-AAAABJRU5-Erk-Jggg.png" alt="">
+    
+        <div id="giftingTextSection">
+        <span>Gifting made easy</span><br>
+        <span>Give a Best Buy Gift Card</span>
+        </div>
+
+        <div id="giftingBtnSection" >
+            <select name="" id="" class="selectProperty">
+                <option value="">--/--</option>
+                <option value="50">$50</option>
+                <option value="25">$25</option>
+                <option value="100">$100</option>
+                <option value="200">$200</option>
+                <option value="500">$500</option>
+            </select>
+
+            <button class="btnSet">Add to Cart</button>
+        </div>
+    </div>
+
+    <!--                    Cart Entire Body                    -->
+
+    <div id="cartEntireBody">
+
+
+    <!--                     Products Section                   -->  
+
+        <div id="yourCart">
+            <span class="headingCart">Your Cart</span>
+
+            <div id="specialOffers">
+                
+                    <i class="fa-solid fa-sack-dollar"></i><span>Special Offers</span>
+                    <span class="grey" style="font-size:15px;">We found offers available based on items in your cart! <span style="color:#0046BE" class="hoverProperty" id="specialOffer">See all</span></span>
+                    <p id="hiddenHurrray">Hurray! Offer successfully applied!!!</p>
+            </div>
+
+            
+
+
+            <div id="container"></div>
+
+
+            <div id="savedItems">
+                <div id="savedItemsVisibleSection">
+                <div>
+                <i class="fa-regular fa-bookmark"></i> <span class="headingCart">Saved Items</span>
+                </div>
+                <div id="arrowUpDown">
+                    <i class="fa-sharp fa-solid fa-chevron-down" id="showArrow"></i>
+                    <span id="showAgain"><i class="fa-sharp fa-solid fa-angle-up"></i></span>
+                </div>
+                </div>
+                <div id="savedItemsInvisibleSection">
+                    <div class="ruler"></div>
+                    <h4>Your list is currently empty</h4>
+                    <p class="grey">Need inspiration? Check out <span class="hoverProperty" style="color: rgb(30, 121, 224);">recommended items</span>, or search for items to save.</p>
+                </div>
+                    
+
+            </div>
+
+            <div id="frequentlyBoughtTogether">
+                <span class="smallHeading">Frequently bought together</span> <span id="showFBT"></span>
+                <section class="product" style="background-color:white"> 
+        
+                    <button class="best-pre-btn"><img src="./AVNEESHIMAGES/arrow.png" alt=""></button>
+                    <button class="best-nxt-btn"><img src="./Avneeshimages/arrow.png" alt=""></button>
+                    <div id="product-container">
+                    </div>
+                </section>
+            </div>
+            
+        </div>
+
+
+
+        <!--                 Cart summary Section                -->
+        
+        <div id="cartSummary">
+            <span class="headingCart" style="text-align: center;margin-bottom:25px">Order Summary</span>
+            <div class="ruler"></div>
+            <div id="cartCalculation">
+                <div id="calculationText">
+                    <p class="grey">Item Total</p>
+                    <p class="grey">Shipping</p>
+                    <p class="grey hoverProperty" style="color: rgb(30, 121, 224)">Estimated Sales Text</p>
+                </div>
+                <div id="calculationNum">
+                    <p id="itemTotal" class="grey">$0.00</p>
+                    <p class="grey">Free</p>
+                    <p class="grey">$0.00</p>
+                </div>
+            </div>
+            <div class="ruler"></div>
+            
+            <div id="totalDiv"> 
+                <div class="smallHeading">Total</div>
+                <div id="showTotal" class="smallHeading">$0.00</div>
+            </div>
+
+            <button id="checkout">Checkout</button>
+            <button id="paypalCheckout"><span><i style="font-size: 17px; font-weight: 600;">PayPal </i>Checkout</span></button>            
+            
+            <p class="grey" style="margin-bottom:25px;"><span class="hoverProperty" style="color: rgb(30, 121, 224); ">Sign in or create an account</span> to get My Best<sup style="font-size: 8px;">TM</sup> Points</p>
+            
+            <div class="ruler"></div>
+
+            <div id="cardReward">
+                <div id="cardImg">
+                    <img src="https://www.bestbuy.com/~assets/bby/_com/MBBCC_MBBVC_Contactless_Dual_Yellow_Edge_RGB-a32c353844fb660dd08157fcccf95d42.png" alt="">
+                    <p class="hoverProperty" style="font-size:12px; color:#0046BE">Show me how ></p>
+                </div>
+                <div id="cardRewardInfo">
+                    <p class="smallHeading" style="margin-top: -10px;">10% back in rewards</p>
+                    <p style="font-size:11px;margin-top: -10px;">on first day of purchases or flexible financing for new My Best Buy® Credit Card members. </p>
+                </div>
+            </div>
+
+            <div class="ruler"></div>
+
+            <div>
+                <p class="smallHeading" style="font-weight:400 ;">Looking for a lease to own option?</p>
+                <p class="grey" style="margin-bottom:25px">Enjoy the tech you want today. <span style="color:#0046BE" class="hoverProperty">Learn more ></span></p>
+            </div>
+
+            <div class="ruler"></div>
+
+            <div id="zopReward">
+                <div id="zopImg">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCA4OCAzMiIgYWx0PSIiIGFyaWEtaGlkZGVuPSJ0cnVlIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEuOTY4MTUgMjUuMDg3NEwyLjczMTE5IDMxLjEzNDhIMjkuNDQxMUwyOC41NjgxIDI0LjIwOTlIMTYuMTEyOEwxNi4wMDUxIDIzLjM1MDdMMjcuNDc1MiAxNS41NTI2TDI2LjcwODggOS40OTIxOUgwTDAuODc0MTE0IDE2LjQxODJIMTMuMzQ4M0wxMy40NTgzIDE3LjI4MzhMMS45NjgxNSAyNS4wODc0WiIgZmlsbD0iIzFBMDgyNiIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTI5LjgxMjUgOS40OTEyMUwzMi41NDM3IDMxLjEzMzlINTkuMjc0N0w1Ni41NDI0IDkuNDkxMjFIMjkuODEyNVoiIGZpbGw9IiNBQThGRkYiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0zMi40MDEgNi42MTk2N0MzNC4xNTA0IDguMTMzNjkgMzYuNjczOSA4LjEzMzY5IDM4LjAzNjcgNi42MTk2N0MzOS40MDA2IDUuMTA1NjQgMzkuMDg3NCAyLjY1MDM1IDM3LjMzODEgMS4xMzYzM0MzNS41ODk4IC0wLjM3ODc3NiAzMy4wNjYzIC0wLjM3ODc3NiAzMS43MDI0IDEuMTM2MzNDMzAuMzM5NiAyLjY1MDM1IDMwLjY1MTcgNS4xMDU2NCAzMi40MDEgNi42MTk2N1oiIGZpbGw9IiMxQTA4MjYiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03Ny40MjY3IDIwLjczOEw2OS4wNjEgMjAuNzQ2Nkw2OC40MDU3IDE1LjU1MjlMNzYuODE0NyAxNS41NTk0Qzc4Ljc5MTggMTUuNTgyMSA3OS44MDQ3IDE2LjY2NiA3OS45NjggMTguMTQ4N0M4MC4wNzI0IDE5LjEwMjkgNzkuNjIzNyAyMC43MzggNzcuNDI2NyAyMC43MzhaTTg3LjMwNzQgMTcuMjg0MkM4Ni42ODk5IDEyLjQxOSA4Mi43NjI1IDkuNDcwODkgNzcuNDI0NSA5LjQ5MTMySDU5LjY0NDVMNjIuMzc1NyAzMS4xMzUySDcwLjM3MzhMNjkuODI2MiAyNi44MDZINzguMjkwOEM4NC45NTI4IDI2LjgwNiA4OC4wMDE2IDIyLjc2NjQgODcuMzA3NCAxNy4yODQyWiIgZmlsbD0iIzFBMDgyNiIvPgo8L3N2Zz4K" alt="">
+                    <p class="hoverProperty" style="font-size:12px; color:#0046BE">learn more ></p>
+                </div>
+                <div id="zopRewardInfo">
+                    <p class="grey" style="margin-top: -10px; margin-bottom:28px">4 payments starting at <span >$12.50</span></p>
+                    
+                    <p style="font-size:11px;margin-top: -10px;">Select Zip under 'Other payment options' when checking out.</p>
+                </div>
+            </div>
+
+            <div class="ruler"></div>
+
+            <div id="buyGift">
+                <img src="https://i.ibb.co/s99vD1x/Gift-present-box-shopping-generated.jpg"alt=""><p>Buying a gift for someone special?</p>
+                <p class="grey">Gift options can be added in checkout. <span style="color:#0046BE" class="hoverProperty">Learn more > </span></p>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</body>
+</html>
+<script type="module" src="cart.js"></script>

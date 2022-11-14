@@ -10,7 +10,7 @@ body{
     margin-top: 50px;
 }
 #adminMainDiv>div{
-    border: 1px solid black;
+    border: 0px solid black;
     width: 73%;
     height: 350px;
     margin-left: 70px;
@@ -20,8 +20,8 @@ body{
     margin: auto;
     display: flex;
     flex-direction: column;
-    width: 28%;
-    border: 0px solid rgb(190, 0, 0);
+    width: 25%;
+    border: 0px solid rgb(220, 220, 220);
 
 }
 #selectCategoryDiv{
@@ -100,7 +100,7 @@ section>div{
     border-style:dashed;
 }
 #sortingDiv,#filteringDiv{
-    border:1px solid black;
+    border:1px solid rgb(212, 210, 210);
     margin: auto;
     margin-top: 20px;
     width: 60%;
@@ -239,12 +239,18 @@ section>div{
     border: none;
 }
 
-.DeliveryBox{
-    display: flex;
-    margin-top: 12px;
-}
-.Delivery_text{
-    margin-top: 1px;
-    margin-left: 5px;
-}
 
+section>div#sortinNFilteringDiv{
+    width: 350px;
+    height: 590px;   
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+sortinNFilteringDiv::-webkit-scrollbar{
+    width: 13px;
+    background: rgb(210, 208, 208);
+}
+sortinNFilteringDiv::-webkit-scrollbar-thumb{
+    background: #abadb0;
+}

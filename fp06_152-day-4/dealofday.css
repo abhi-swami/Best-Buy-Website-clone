@@ -1,0 +1,598 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Human BBY Digital","Human Fallback",Arial, Helvetica, sans-serif;
+}#afncountdown {
+
+    display: flex;
+    width: 100%;
+    height: 150px;
+    margin: auto;
+    background-image: url('https://pisces.bbystatic.com/image2/BestBuy_US/dam/GL-76777-vpt-dotd-102422-e0e5e9aa-5474-4b89-99cb-4c23918591a1.jpg');
+    /* border: 1px solid red; */
+
+}
+
+#afncurrentDeal {
+
+    height: 600px;
+
+}
+
+.afncd1 {
+
+    /* margin: auto; */
+    margin: 0px 0px 0px 100px;
+    padding: 5px;
+    /* height: ; */
+
+}
+
+.afndod1 {
+
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+    box-sizing: border-box;
+    display: block;
+
+}
+
+.afndod2 {
+
+    color: white;
+    margin: -15px 0px 0px 0px;
+    font-size: 15px;
+
+} 
+
+.afndod3 {
+
+    color: #FFE000;
+    font-size: 15px;
+    margin: 10px 0px 0px 0px;
+    cursor: pointer;
+
+}
+
+.afncd2 {
+
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 180px;
+    height: 80px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px 0px 10px 500px;
+    padding: 0px 0px 30px 40px;   
+    font-size: 30px;
+
+}
+
+.afncd2>div {
+
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    color: black;
+    font-style: 36px;
+    display: block;
+    padding: 0px 0px 200px 0px;
+    line-height: 48px;
+    /* padding-bottom: 30px; */
+
+}
+
+#afncurrentDeal {
+
+    display: flex;
+
+}
+
+.laptopimg {
+
+    width: 300px;
+    height: 200px;
+    
+}
+
+.img1 {
+    
+    width: 40%;
+    margin: 50px 0px 0px 200px;
+    cursor: pointer;
+
+}
+
+.details {
+
+    width: 60%;
+    margin: 30px 0px -100px 0px;
+
+}
+
+.blue {
+
+    cursor: pointer;
+    color: blue;
+
+}
+
+.blue:hover {
+
+    text-decoration: underline;
+
+}
+
+.details i {
+
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+
+}
+
+.details span {
+
+    font-size: 12px;
+    color: blue;
+
+}
+
+.details .green {
+
+    color: green;
+
+}
+
+.pickup {
+
+    cursor: pointer;
+    color: blue;
+    text-underline-offset: 0;
+    font-size: 11px;
+
+}
+
+#afnaddtocart {
+
+    width: 90px;
+    border-radius: 5px;
+    height: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    background-color: #FFE000;
+
+}
+
+#afnproducts {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 90%;
+    margin: auto;
+    grid-gap: 30px;
+    align-items: center;
+    /* text-align: center; */
+
+}
+
+.afnimg1 {
+
+    /* border: 0.1px solid grey; */
+    border-radius: 10px;
+    box-shadow: 20px 20px 30px 30px rgba(0, 0, 0, 0.03);
+
+}
+
+.afnpsize {
+
+    color: blue;
+    font-size: 13px;
+    margin-left: 10px;
+    cursor: pointer;
+
+}
+
+.afnpsize:hover {
+
+    cursor: pointer;
+    text-decoration: underline;
+
+}
+
+.review {
+
+    margin-left: 10px;
+    /* color: #0046BE; */
+    cursor: pointer;
+
+}
+
+.review:hover {
+
+    color: #0046BE;
+    text-decoration: underline;
+
+}
+
+.price {
+
+    margin-left: 10px
+
+}
+
+.save {
+
+    width: 80px;
+    background-color: brown;
+    color: white;
+    font-size:15px;
+    padding: 5px;
+    font-weight: bold;
+    margin-left: 10px
+
+}
+
+.item {
+
+    box-shadow: 20px 20px 30px 30px rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+    align-items: center;
+
+}
+
+.afnimgs1 {
+
+    height: 250px;
+    width: 200px;
+    cursor: pointer;
+    margin-left: 80px;
+    padding: 0px 0px 30px 0px;
+    margin-top: 20px;
+
+}
+
+/* .afnimgs2 {
+
+    height: 200px;
+    width: 300px;
+    cursor: pointer;
+
+}
+
+.afnimgs3 {
+
+    height: 200px;
+    width: 300px;
+    cursor: pointer;
+    padding: 0px 0px 30px 0px;
+    margin-top: 20px;
+
+}
+
+.afnimgs4 {
+
+    height: 200px;
+    width: 300px;
+    cursor: pointer;
+    padding: 0px 0px 25px 0px;
+    margin-top: 15px;
+
+}
+
+.afnimgs5 {
+
+    height: 300px;
+    width: 200px;
+    cursor: pointer; 
+    margin-left: 60px;
+
+}
+
+.star {
+
+    margin-left: 10px
+
+}
+
+.stars {
+
+    color: gold;
+    cursor: pointer;
+
+} */
+
+.afnaddtocart1 {
+
+    width: 130px;
+    border-radius: 5px;
+    height: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    background-color: #FFE000;
+    margin: 40px 0px 20px 10px;
+    cursor: pointer;
+    color: #040C13;
+    font-weight: bold;
+
+}
+
+#afnTopProducts {
+
+    display: flex;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    color: blue;
+    gap: 30px;
+    cursor: pointer;
+    /* height: 500px; */
+
+}
+
+.topdealsdiv:hover {
+
+    box-shadow: 20px 20px 30px 30px rgba(0, 0, 0, 0.03);
+    border: 1px sollid blue;
+    text-decoration-line: underline;
+    border-radius: 10px;
+
+}
+
+.topdealspsize1 {
+
+    /* padding: 0px 40px 0px 40px; */
+    margin-top: 40px;
+    cursor: pointer;
+
+}
+
+.topdealspsize2 {
+
+    /* padding: 0px 40px 0px 40px; */
+    margin-top: 60px;
+    cursor: pointer;
+
+}
+
+.topdealspsize3 {
+
+    /* padding: 0px 40px 0px 40px; */
+    margin-top: 55px;
+    cursor: pointer;
+
+}
+
+.topdealspsize4 {
+
+    /* padding: 0px 40px 0px 40px; */
+    margin-top: 10px;
+    cursor: pointer;
+
+}
+
+.topdealspsize5 {
+
+    /* padding: 0px 40px 0px 40px; */
+    margin-top: 60px;
+    cursor: pointer;
+
+}
+
+.topdealspsize6 {
+
+    /* padding: 0px 40px 0px 40px; */
+    margin-top: 15px;
+    cursor: pointer;
+
+}
+
+.topdealspsize7 {
+
+    /* padding: 0px 40px 0px 40px; */
+    margin-top: 50px;
+    cursor: pointer;
+
+}
+
+.topdealspsize8 {
+
+    /* padding: 0px 40px 0px 40px; */
+    margin-top: 20px;
+    cursor: pointer;
+
+}
+
+.topdealspsize9 {
+
+    /* padding: 0px 40px 0px 40px; */
+    margin-top: 20px;
+    cursor: pointer;
+
+}
+
+/* #afngetdeal {
+
+    width: 60%;
+    margin: ;
+
+} */
+
+#afnsignup {
+
+    display: flex;
+    width: 60%;
+    margin: auto;
+    /* justify-content:; */
+    margin-top: 50px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    gap: 30px;
+
+}
+
+.email {
+
+    padding: 24px 32px;
+    border: 0.5px solid gray;
+    background-color: #ebf2fc;
+
+}
+
+input {
+
+    font-size: 15px;
+    margin: 0px 0px 4px;
+    padding: 5px 20px 5px 10px;
+    border: 0px;
+    cursor: pointer;
+
+}
+
+button {
+
+    background-color: #0046BE;
+    color: white;
+    margin: 16px 0px 0px;
+    padding: 0px 22px;
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-flex;
+    height: 35px;
+    border-radius: 5px;
+    text-align: center; 
+    border: 0px;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.text {
+
+    /* margin-left: 180px;   */
+    padding: 24px 32px;
+    border: 0.5px solid gray;
+    background-color: #ebf2fc;
+
+}
+
+#afndelivery {
+
+    display: flex;
+    width: 100%;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+
+}
+
+#afndelivery div {
+
+    margin: auto;
+    margin-bottom: 40px;
+
+}
+
+#afndelivery img {
+
+    width: 70px;
+    height: 70px   ;
+
+}
+
+#afndelivery h4 {
+
+    cursor: pointer;
+    font-size: 20px;
+    color: #55555A;
+
+}
+
+#afndelivery p  {
+
+    font-size: 13px;
+    color: #040C13;
+    margin-top: -25px;
+
+}
+
+#afnsale {
+
+    display: flex;
+    width: 58%;
+    justify-content: space-around;
+    border: 0.5px solid gray;
+    padding: 10px 10px 10px 30px;
+
+}
+
+#afnsale h2:hover {
+
+    text-decoration: underline;
+    cursor: pointer;
+
+}
+
+#description>div {
+
+    padding: 0px 20px 30px 20px;
+    border: 0.5px solid gray;
+    margin-top: 10px;
+
+}
+
+#description h3 {
+
+    color: #040C13;
+    margin: 18px 0px 4px;
+    font-size: 17px;
+
+}
+
+#description p {
+
+    font-size: 15px;
+    color: #040C13;
+    margin: 0px 0px 15px;
+
+}
+
+#description span:hover {
+
+    text-decoration: underline;
+    cursor: pointer;
+
+}
+
+#afntdd {
+
+    margin-top: 50px;
+
+}
+
+#afntdd h2 {
+
+    color: #040C13;
+    font-size: 13px;
+    margin: 0px 0px 4px;
+
+}
+
+#afntdd div {
+
+    font-size: 11px;
+    color: #55555A;
+    margin: 0px 0px 8px;
+
+}
+
