@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+    <div id="navbar">
+        <div id="logoDiv">
+        <img id='logo' src="https://logodownload.org/wp-content/uploads/2020/05/best-buy-logo-2.png" alt="">
+        </div>
+        <div>    
+        <span id='logoText'>Checkout</span>
+        </div>
+        <div id="returnToCart" onclick="returnToCart()">Return to Cart</div>
+    </div>
+
+    <div id="contentBody">
+
+        <div id="formBody">
+            <h1 style="margin-top:-10px">Payment Information</h1>
+            <div id="formDiv">
+                <label class="heading">Credit or Debit Card Number</label>
+
+                <input class="crNum" type="search" maxlength="16">
+
+                <div id="imgDiv">
+                    <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/MyBBYCC-3feb97d2-f3fa-4908-9502-2a8715237d93.png" alt=""><img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/MBBVC_YellowEdge_Contactless_RGB_Final-9736ce9f-b00a-43ea-a36b-d6fbce539f4e.png" alt=""><img src="https://pisces.bbystatic.com/image2/vector/BestBuy_US/Gallery/payment-mastercard-217874.svg" alt=""><img src="https://pisces.bbystatic.com/image2/vector/BestBuy_US/Gallery/logo-visa-217847.svg" alt=""><img src="https://pisces.bbystatic.com/image2/vector/BestBuy_US/Gallery/payment-discover-217870.svg" alt=""><img src="https://pisces.bbystatic.com/image2/vector/BestBuy_US/Gallery/payment-amex-217866.svg" alt=""><img src="https://pisces.bbystatic.com/image2/vector/BestBuy_US/Gallery/payment-unionpay-217878.svg" alt=""><img src="https://pisces.bbystatic.com/image2/vector/BestBuy_US/Gallery/payment-jcb-217873.svg" alt="">
+                </div>
+                <hr>
+                <p class="linkText">Other payment option</p>
+                <hr>
+                <p class="linkText">Use a Best Buy Gift Card, Store Credit or Discount Code </p>
+                <p>Billing Address</p>
+                <label class="heading">First Name</label><br>
+                <input type="text" class="middleInp" id="firstName"><br>
+                <label class="heading" style="margin-left:1px">Last Name</label>
+                <br>
+                 <input type="text" class="middleInp" id="lastName">
+                <br>
+                <br>
+                <label class="heading">Address</label><span class="linkText" style="margin-left:260px;">Military(AFO,FPO) | International Customer</span>
+                <br>
+                <input class='crNum' type="search">
+                <p class="linkText">Add Apt #, Suite, Floor(optional)</p>
+                <label class="heading">City</label><br>
+                <input class="middleInp" type="text"><br>
+                <label class="heading" style="margin-left:2px;">Zip Code</label><br> 
+                <input style="margin-left:2px" class="middleInp" type="text" maxlength="6">
+            </div>
+            <div id="contactInfo">
+
+                <h3>Contact Information</h3>
+                <label for="" class="heading">Email Address</label>
+                <br><input type="email" class="crNum">
+                <label for="" class="heading">Phone Number</label><br>
+                <input style="width:101%; height:40px" type="search" class="crNum">
+                <br>
+                <input type="checkbox"> <label for="" class="grey">Text me updates about all my orders, services and appointments.</label>
+            </div>
+
+            <div id="donationInfo">
+
+            <h3>Want to help us fight childhood cancer?</h3>                
+
+            <img src="https://www.bestbuy.com/~assets/bby/_com/st-jude-large-view-checkout-60b3a3a2c7027e50272a73e9eba22ef2.png" alt="">
+            
+            <p class="grey"><b>$2 donations</b> can provide IV patients undergoing treatment</p>
+            <p class="grey"><b>$5 donations</b> can provide thermometers and snack bags for families</p>
+            <p class="grey"><b>$10 donations</b> can provide new toys for play areas and housing facilities</p>
+
+            <p style="margin-top:20px" class="heading">Choose a donation amount:</p>
+            <div id="btnDiv">
+                    <button class="setBtn">$2</button>
+                    <button class="setBtn">$5</button>
+                    <button class="setBtn">$10</button>
+                    <button class="setBtn">Other</button>
+                </div>
+                <br>
+            <p class="grey">Donations are tax-deductible as allowed by law and will be charged to the credit card used on your Best Buy order as a separate transaction on your credit card statement.</p>
+
+            </div>
+
+            <div id="placeYourOrder">
+
+                <p class="grey">By placing your order, you agree to our <span class="linkText"> BestBuy.com Terms and Conditions</span> and our <span class="linkText">Privacy Policy.</span></p>
+                <button id="pyoBtn">Place Your Order</button>
+            </div>
+
+
+            
+            
+        </div>
+        <div id="summaryBody">
+            <h3>Order Summary</h3>
+            <h6>Digital Delivery</h6>
+            <hr>
+            <div id="priceShow">
+                <div style="width:70%;";>
+                    <div>Item Subtotal</div>
+                    <div style="color:#0046BE ;">Estimated Sales Tax</div>
+                </div>
+                <div style="text-align: end;width:34%;">
+                    <div id="showPrice">$0.00</div>
+                    <div>$0.00</div>
+                </div>
+            </div>
+            <p class="grey" style="color:#0046BE;">Apply a Best Buy Tax Exempt Account Number
+
+
+            </p>
+            <hr>
+            <div id="totalText">
+            <span>Total</span><span id="totalPrice">$0.00</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="popBg">
+
+        <div id="popBox">
+            <img src="https://media.tenor.com/0EflySmYSuAAAAAi/check-mark-button-joypixels.gif" alt="">
+        
+            <p class="placed">Order Placed Successfully !</p>
+            <button onclick="continueShopping()">Continue Shopping</button>
+        </div>
+    </div>
+
+
+
+    <div id="footer">
+
+        <div id="footerDiv">
+            <div><span class="footerText">Terms and Condition</span> | <span class="footerText">Privacy</span> | <span class="footerText">Interest-Based Ads</span> | <span class="footerText">Returns & Exchanges</span></div>
+            <div><span class="footerText">Give Feedback</span> | <span class="footerText">Mobile</span></div>
+            <div class="grey" style="font-size:11px">Prices and offers are subject to change. © 2022 Best Buy. All rights reserved. BEST BUY, the BEST BUY logo, the Tag Design, MY BEST BUY, and BESTBUY.COM are trademarks of Best Buy and its affiliated companies.</div>
+
+        </div>
+    </div>
+    
+</body>
+</html>
+<script src="checkout.js"></script>

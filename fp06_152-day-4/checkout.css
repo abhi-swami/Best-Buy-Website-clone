@@ -1,0 +1,248 @@
+body{
+    margin:0px;
+    padding:0px;
+    background-color: #F0F2F4
+}
+#navbar{
+    display:flex;
+    height:70px;
+    width:99.88%;
+    
+    background-color: #0046BE;
+    
+
+}
+#logo{
+    
+    height:100%;
+}
+#logoDiv{
+    margin-left:18%;
+    
+}
+#returnToCart{
+    display: flex;
+    align-items: center;
+    /* border:1px solid black; */
+    color:white;
+    font-size: 12px;
+}
+#logoText{
+    display: flex;
+    align-items: center;
+    
+    /* border:1px solid black; */
+    padding-top:16px;
+    color:white;
+    font-size: 32px;
+    padding-right:650px
+
+}
+#returnToCart:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#contentBody{
+    display: flex;
+    width:65%;
+    margin: auto;
+    padding:20px;
+    /* border:1px solid; */
+}
+#formBody{
+    width:70%;
+    /* border:1px solid; */
+    margin-right:30px
+}
+#formDiv{
+    padding:30px 30px 30px 30px;
+    background-color: white;
+    
+    border:1px solid #e6e9eb
+}
+#summaryBody{
+    width:30%;
+    border:1px solid #e6e9eb;
+    position:sticky;
+    margin-top:50px;
+    height:250px;
+    top:0;
+    padding:20px 20px 20px 20px;
+    background-color: white;
+}
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#imgDiv{
+    width:100%;
+    margin-top: 10px;
+}
+#imgDiv img{
+width:50px;
+/* margin-top:10px; */
+ margin-right: 20px;
+}
+
+.crNum{
+    width:100%;
+    height:32px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.linkText{
+    font-size: 12px;
+    color:#0046BE;
+}
+.heading{
+    font-weight: 600;
+}
+.middleInp{
+    width:48.1%;
+    height:28px;
+    margin-top:10px;
+    margin-bottom:10px;
+
+}
+#contactInfo{
+    display: flex;
+    flex-direction: column;
+    padding:30px;
+    background-color: white;
+    margin-top:30px;
+    border:1px solid #e6e9eb;
+
+}
+.grey{
+    font-size: 12px;
+}
+#donationInfo{
+    width:91%;
+    background-color:white;
+    padding:30px;
+    margin-top:30px;
+    border:1px solid #e6e9eb;
+
+}
+#donationInfo > img{
+    width:100%;
+}
+#btnDiv{
+    display:flex;
+    justify-content:space-between;
+   
+    
+}
+.setBtn{
+    width:130px;
+    height:35px;
+    background-color: white;
+    color:#0046BE;
+    font-weight: 600;
+    border:1px solid#0046BE;
+    border-radius:5px;
+}
+.setBtn:hover{
+    cursor: pointer;
+    background-color: #093b91;
+    color: white;
+}
+#placeYourOrder{
+    display: flex;
+    flex-direction: column;
+    padding:40px;
+    background-color: white;
+    margin-top: 30px;
+    border:1px solid #e6e9eb;
+    width:88%;
+}
+.linkText:hover{
+    cursor: pointer;
+    text-decoration: underline;
+
+}
+#placeYourOrder>button{
+    height:40px;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: rgb(233, 222, 12);
+    border:none;
+}
+#pyoBtn:hover{
+    cursor:pointer;
+    background-color:rgb(255, 242, 0);
+}
+#footer{
+    background-color: white;
+    /* padding:10px; */
+    height:100px;
+    margin-top:50px;
+    padding-top:5px
+}
+#footerDiv{
+    width:65%;
+    /* border:1px solid red; */
+    font-size: 12px;
+
+    margin:auto;
+   
+}
+.footerText{
+color: #0046BE;
+margin-right:5px;
+
+}
+#footerDiv>div{
+    margin-top:13px
+}
+#priceShow{
+    display: flex;
+    font-size: 13px;
+    
+}
+#totalText{
+    font-size: 28px;
+    display: flex;
+    justify-content:space-between;
+    font-weight: 600;
+}
+#popBg{
+    width:100%;
+    height:266vh;
+    position:absolute;
+    background-color: rgba(0, 0, 0, 0.611);
+    top:0;
+    display:none;
+}
+#popBox{
+    width:30%;
+    height:350px;
+    position: relative;
+    z-index: 1;
+    top:1400px;
+    left:500px;
+    background-color: #a5a5a5;
+    padding:20px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#popBox> img {
+    width:70%;
+    margin-top:-60px;
+    margin-left:-50px;
+}
+.placed{
+    font-size: 24px;
+    color:rgb(12, 181, 12);
+    font-weight: 600;
+    
+}
+#popBox > button{
+    padding:8px;
+    margin-left:200px;
+    background-color:white ;
+    color:#0046BE;
+    font-weight: 600;
+    border:1px solid ;
+    cursor: pointer;
+}

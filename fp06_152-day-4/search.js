@@ -15,14 +15,66 @@ let abDiv1=document.getElementById("abDiv1")
 abDiv1.onclick=()=>{
     window.location.href="index.html"
 }
+let abSubNavDiv3=document.getElementById("abSubNavDiv3")
+abSubNavDiv3.onclick=()=>{
+    window.location.href="dealofday.html"
+}
+let abMenuLogo = document.getElementById("abMenuLogo");
+let abDiv2 = document.getElementById("abDiv2");
+let abmenuid = document.getElementById("abmenuid");
+let abclose = document.getElementById("abclose");
+let count=0;
+abDiv2.addEventListener("click",()=>{
+    count++;
+    if(count%2==0){
+        abmenuid.style.display="none";
+        abDiv2.innerHTML=`<i id="abMenuLogo" class="fa-solid fa-bars">
+        <span id="abMenuWord">Menu</span></i>`;
+        abDiv2.style.color="white";
+        abDiv2.style.marginLeft="5px"
+        abDiv2.style.marginTop="6px";
+    }else{
+        abmenuid.style.display="block";
+        abDiv2.innerHTML=`<i class="fa-sharp fa-solid fa-xmark" id="abMenuLogo1"><span id="abMenuWord">Menu</span></i>`
+        abDiv2.style.color="white";
+        abDiv2.style.marginTop="20px";
+        abDiv2.style.marginLeft="5px"
+    }
+});
+abclose.addEventListener("click",()=>{
+    abmenuid.style.display="none";
+    abDiv2.innerHTML=`<i id="abMenuLogo" class="fa-solid fa-bars">
+        <span id="abMenuWord">Menu</span></i>`
+})
+// sub nav bar account section section
+let abSubNavDiv7 =document.getElementById("abSubNavDiv7");
+let abaccountfirstpageid =document.getElementById("abaccountfirstpageid");
+let c=0;
+abSubNavDiv7.addEventListener("click",()=>{
+    c++;
+    if(c%2==0){
+        abaccountfirstpageid.style.display="none";        
+    }else{
+        abaccountfirstpageid.style.display="block";
+    }
+});
+let absignlink = document.getElementById("absignlink");
+absignlink.addEventListener("click",()=>{
+    window.location.href="login.html";
+});
+let abloginlink = document.getElementById("abloginlink");
+abloginlink.addEventListener("click",()=>{
+    window.location.href="signUp.html";
+});
 
+let LaptopsURL=`https://mighty-savannah-51128.herokuapp.com/api/Laptops`;
+let TVURL=`https://mighty-savannah-51128.herokuapp.com/api/TV`;
+let videoGamesURL=`https://mighty-savannah-51128.herokuapp.com/api/videoGames`;
+let cellPhoneURL=`https://mighty-savannah-51128.herokuapp.com/api/cellPhone`;
+let HeadphonesURL=`https://mighty-savannah-51128.herokuapp.com/api/Headphones`;
+let universalURL=`https://mighty-savannah-51128.herokuapp.com/api/allProducts`;
+let cartURL=`https://mighty-savannah-51128.herokuapp.com/api/newCart`
 
-let LaptopsURL=`http://localhost:3000/api/Laptops`;
-let TVURL=`http://localhost:3000/api/TV`;
-let videoGamesURL=`http://localhost:3000/api/videoGames`;
-let cellPhoneURL=`http://localhost:3000/api/cellPhone`;
-let HeadphonesURL=`http://localhost:3000/api/Headphones`;
-let universalURL=`http://localhost:3000/api/allProducts`;
 let getElement=(id)=>{
     return document.getElementById(id)
 }
@@ -130,21 +182,22 @@ let card=(({name,image,description,price,actualPrice,category,ratings,totalRatin
     let descBox=genEle("div")
     descBox.classList.add("descDiv")
 
-    descBox.append(productName,desc,p,ap,categ,rat,rat_num,DeliveryBox)
+    descBox.append(productName,desc,p,ap,categ,rat,rat_num)
     
     let updateBox=genEle("div")
     updateBox.classList.add("updateDiv")
 
     let shopping_icon = genEle("span");
-    shopping_icon.innerHTML=`<i class="fa-solid fa-cart-shopping"></i>`
+    // shopping_icon.innerHTML=`<i class="fa-solid fa-cart-shopping"></i>  Add Product`
     shopping_icon.classList.add("shopping_icon");
     let addProduct=genEle("button");
     addProduct.setAttribute("class","addProduct");
-    addProduct.innerText="Add Product"
+    addProduct.innerHTML=`<i class="fa-solid fa-cart-shopping"></i>  Add Product`
     addProduct.onclick=()=>{
+        let obj1={name,image,description,price,actualPrice,category,ratings,totalRatings,id};
+        addTocart(cartURL,obj1)
     }
-    updateBox.append(shopping_icon,addProduct)
-    updateBox.setAttribute("class","updateBox");
+    updateBox.append(shopping_icon,addProduct,DeliveryBox)
     box.append(imageBox,descBox,updateBox)
     return box
 })
@@ -160,6 +213,16 @@ let appendData=(data,url)=>{
 }
 // appendCategory(HeadphonesURL);
 
+
+let addTocart=async(url,obj1)=>{
+    await fetch(url,{
+        method:"POST",
+        body:JSON.stringify(obj1),
+        headers:{
+            "Content-Type":"application/json",
+        },
+    });
+};
 
 
 let sortNFilter=(url)=>{
@@ -251,9 +314,9 @@ searchInput.oninput=()=>{
         },1000)
 }
 let searchProduct=async(q)=>{
-    let res=await fetch(`http://localhost:3000/api/allProducts`)
+    let res=await fetch(`https://mighty-savannah-51128.herokuapp.com/api/allProducts`)
     let data=await res.json();
-    myfun(data,q,`http://localhost:3000/api/allProducts`);
+    myfun(data,q,`https://mighty-savannah-51128.herokuapp.com/api/allProducts`);
 }
 let myfun=(data,q,url)=>{
     let arr=[];

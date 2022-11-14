@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase History</title>
+    <link rel="stylesheet" href="purchaseHistory.css">
+    <script src="https://kit.fontawesome.com/4b85608a8b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <div id="AvContainer">
+    <div id="purchaseHistoryTitleBody">
+        <div><h2>Purchase History</h2></div>
+        <div id="fourTextSections"><span style="color:rgb(16, 16, 16)">Purchases</span> <span>Service History</span> <span>Digital Library</span> <span>Easy Replenish  <sup style="font-size:9px">TM</sup></span></div>
+    
+    </div>
+
+    <hr style="margin-bottom: 2rem;" >
+    <div id="searchAndViewing">
+       
+
+        <div>
+            <input id="AvSearch" type="search" placeholder="Search by product name or order number"><button id='Avbtn'>Search All</button>
+        </div>
+        <div id="AvSelect">
+            <label for="">Viewing:</label>
+            <select name="" id="">
+                <option value="">Past 3 Years</option>
+                <option value="">Past 2 Years</option>
+                <option value="">Past 1 Years</option>
+                <option value="">Past 5 Months</option>
+            </select>
+        </div>
+
+    </div>
+
+    <div id="threeParts">
+        <span id="allOrders">All Orders</span>
+        <span id="inProgress">In Progress</span>
+        <span id="canceled">Canceled</span>
+    </div>
+    <hr>
+
+    <div id="ifNoProduct">
+        <h3>You dont have any orders in-store purchases.</h3>
+        <p>It may take up to 15 minutes for new orders to appear.</p>
+    </div>
+
+    <div id="allProductsShow">
+
+
+    </div>
+
+
+    <div id="inProgressProducts">
+
+    </div>
+    
+    <div id="canceledProd">
+
+    </div>
+
+    <div id="popularLaptopsDiv">
+        <h2>Popular PC laptops</h2>
+        <hr>
+
+        <section class="product" style="background-color:rgb(240, 242, 244)"> 
+        
+            <button class="best-pre-btn"><img src="./Avneeshimages2/arrow.png" alt=""></button>
+            <button class="best-nxt-btn"><img src="./Avneeshimages2/arrow.png" alt=""></button>
+            <div id="product-container">
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <div id="footer"></div>
+    
+</body>
+</html>
+<script type="module" src="purchaseHistory.js"></script>

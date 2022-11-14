@@ -12,12 +12,69 @@ let  footer=document.getElementById("footer");
 footer.innerHTML=footerfun()
 
 
-let LaptopsURL=`http://localhost:3000/api/Laptops`;
-let TVURL=`http://localhost:3000/api/TV`;
-let videoGamesURL=`http://localhost:3000/api/videoGames`;
-let cellPhoneURL=`http://localhost:3000/api/cellPhone`;
-let HeadphonesURL=`http://localhost:3000/api/Headphones`;
-let universalURL=`http://localhost:3000/api/allProducts`;
+let abDiv1=document.getElementById("abDiv1")
+abDiv1.onclick=()=>{
+    window.location.href="index.html"
+}
+let abSubNavDiv3=document.getElementById("abSubNavDiv3")
+abSubNavDiv3.onclick=()=>{
+    window.location.href="dealofday.html"
+}
+let abMenuLogo = document.getElementById("abMenuLogo");
+let abDiv2 = document.getElementById("abDiv2");
+let abmenuid = document.getElementById("abmenuid");
+let abclose = document.getElementById("abclose");
+let count=0;
+abDiv2.addEventListener("click",()=>{
+    count++;
+    if(count%2==0){
+        abmenuid.style.display="none";
+        abDiv2.innerHTML=`<i id="abMenuLogo" class="fa-solid fa-bars">
+        <span id="abMenuWord">Menu</span></i>`;
+        abDiv2.style.color="white";
+        abDiv2.style.marginLeft="5px"
+        abDiv2.style.marginTop="6px";
+    }else{
+        abmenuid.style.display="block";
+        abDiv2.innerHTML=`<i class="fa-sharp fa-solid fa-xmark" id="abMenuLogo1"><span id="abMenuWord">Menu</span></i>`
+        abDiv2.style.color="white";
+        abDiv2.style.marginTop="20px";
+        abDiv2.style.marginLeft="5px"
+    }
+});
+abclose.addEventListener("click",()=>{
+    abmenuid.style.display="none";
+    abDiv2.innerHTML=`<i id="abMenuLogo" class="fa-solid fa-bars">
+        <span id="abMenuWord">Menu</span></i>`
+})
+// sub nav bar account section section
+let abSubNavDiv7 =document.getElementById("abSubNavDiv7");
+let abaccountfirstpageid =document.getElementById("abaccountfirstpageid");
+let c=0;
+abSubNavDiv7.addEventListener("click",()=>{
+    c++;
+    if(c%2==0){
+        abaccountfirstpageid.style.display="none";        
+    }else{
+        abaccountfirstpageid.style.display="block";
+    }
+});
+let absignlink = document.getElementById("absignlink");
+absignlink.addEventListener("click",()=>{
+    window.location.href="login.html";
+});
+let abloginlink = document.getElementById("abloginlink");
+abloginlink.addEventListener("click",()=>{
+    window.location.href="signUp.html";
+});
+
+// https://mighty-savannah-51128.herokuapp.com/
+let LaptopsURL=`https://mighty-savannah-51128.herokuapp.com/api/Laptops`;
+let TVURL=`https://mighty-savannah-51128.herokuapp.com/api/TV`;
+let videoGamesURL=`https://mighty-savannah-51128.herokuapp.com/api/videoGames`;
+let cellPhoneURL=`https://mighty-savannah-51128.herokuapp.com/api/cellPhone`;
+let HeadphonesURL=`https://mighty-savannah-51128.herokuapp.com/api/Headphones`;
+let universalURL=`https://mighty-savannah-51128.herokuapp.com/api/allProducts`;
 let form=document.getElementById("form");
 form.addEventListener("submit",(event)=>{
     event.preventDefault();
@@ -350,9 +407,9 @@ searchInput.oninput=()=>{
         },1000)
 }
 let searchProduct=async(q)=>{
-    let res=await fetch(`http://localhost:3000/api/allProducts`)
+    let res=await fetch(`https://mighty-savannah-51128.herokuapp.com/api/allProducts`)
     let data=await res.json();
-    myfun(data,q,`http://localhost:3000/api/allProducts`);
+    myfun(data,q,`https://mighty-savannah-51128.herokuapp.com/api/allProducts`);
 }
 let myfun=(data,q,url)=>{
     let arr=[];

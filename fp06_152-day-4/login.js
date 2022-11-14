@@ -57,7 +57,7 @@ async function getProfile(username, token) {
     let data = await res.json();
     console.log(data);
     alert(`Dear,${data.name} your login is successfull`)
-    if(data.name == "admin123"){
+    if(data.name == "admin"){
         window.location.href="admin.html"
     }else{
         window.location.href="index.html"

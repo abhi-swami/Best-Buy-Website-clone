@@ -1,0 +1,13 @@
+let abDiv1=document.getElementById("abDiv1")
+abDiv1.onclick=()=>{
+    window.location.href="index.html"
+}
+
+
+let abSubNavDiv3=document.getElementById("abSubNavDiv3")
+abSubNavDiv3.onclick=()=>{
+    window.location.href="dealofday.html"
+}
+
+
+
